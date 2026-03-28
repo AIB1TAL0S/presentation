@@ -111,7 +111,6 @@
 
         /* Streamlined tire/wheel accent — top-right of every slide */
         .reveal .slides section {
-            position: relative;
             overflow: hidden;
         }
         .reveal .slides section::after {
@@ -696,6 +695,590 @@
                     Good morning everyone. We are Team HULE from BSCS 2C. Today we are pitching our project for Software Engineering 1: A web-based Inventory Management System built specifically for our client, Jhaerin Tire Supply.
                 </aside>
             </section>
+        
+
+<!-- ============================================================
+                 SLIDE 2: PROBLEM OVERVIEW
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">The Challenge</span>
+                <h2>Problem Overview</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-2" style="margin-top: 16px;">
+                    <div class="box">
+                        <h4 style="font-size: 0.85em; margin-bottom: 14px; color: var(--clr-red);">
+                            <i class="fa-solid fa-circle-xmark" style="margin-right:8px;"></i>Current State
+                        </h4>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-book-open"></i> Manual, paper-based logbooks</li>
+                            <li><i class="fa-solid fa-file-excel"></i> Basic disconnected spreadsheets</li>
+                            <li><i class="fa-solid fa-layer-group"></i> Complex inventory: brands, sizes &amp; treads</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.85em; margin-bottom: 14px; color: var(--clr-red);">
+                            <i class="fa-solid fa-triangle-exclamation" style="margin-right:8px;"></i>The Impact
+                        </h4>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-xmark"></i> Lost entries &amp; miscounted stock</li>
+                            <li><i class="fa-solid fa-arrow-trend-down"></i> Frequent stockouts or over-ordering</li>
+                            <li><i class="fa-solid fa-calculator"></i> No instant financial summaries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    The business currently uses manual logbooks and basic spreadsheets to manage their complex inventory of tires varying by brand, size, and tread. This outdated process results in lost records, miscounts, stockouts, and makes computing revenue and gross profit difficult without tedious manual calculation.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 3: STAKEHOLDERS & USERS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Who's Involved</span>
+                <h2>Stakeholders &amp; Users</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-2" style="margin-top: 16px; gap: 14px;">
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-user-tie text-red" style="margin-right:9px;"></i>Store Owner
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">AJ Lirpa. Full system access: analytics, financial reports, low-stock thresholds, and staff management.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-users text-red" style="margin-right:9px;"></i>Store Staff
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">Restricted access. Primary users for logging daily transactions (stock-in / stock-out) and creating product records.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-laptop-code text-red" style="margin-right:9px;"></i>Dev Team
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">Team HULE. Responsible for designing, building, testing, and delivering the software system.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-chalkboard-user text-red" style="margin-right:9px;"></i>Course Instructor
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">Evaluates the deliverables, architecture, and documentation for CSP312 requirements.</p>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Our platform serves multiple stakeholders. The store owner gets full access to reports and analytics, while store staff get restricted access to handle day-to-day stock records. Our development team and our course instructor represent the execution and evaluation sides of this project.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 4: WHY THIS MATTERS NOW
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Business Impact</span>
+                <h2>Why This Matters Now</h2>
+                <span class="heading-rule"></span>
+
+                <div class="box" style="margin-top: 18px;">
+                    <ul class="styled-list" style="font-size: 1.08em;">
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span><strong>Slow Replenishment:</strong> <span class="text-dim">Manual tracking causes delayed alerts and poor restocking decisions.</span></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-money-bill-trend-down"></i>
+                            <span><strong>Lost Sales Data:</strong> <span class="text-dim">No real-time visibility means missed sales opportunities.</span></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span><strong>Financial Blind Spots:</strong> <span class="text-dim">No automated analytics prevents the owner from tracking true profit and inventory value.</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Why fix this now? Because the current workarounds cost the business actual money. Without real-time visibility or automated alerts, restocking is slow, sales are lost, and financial tracking is completely blind until the end of the month.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 5: PROPOSED SOLUTION
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Our Answer</span>
+                <h2>Proposed Solution</h2>
+                <span class="heading-rule"></span>
+
+                <div class="vision-quote">
+                    A system that digitizes inventory tracking to improve accuracy, efficiency, and real-time monitoring for Jhaerin Tire Supply.
+                </div>
+
+                <div class="grid-3">
+                    <div class="box box-top">
+                        <i class="fa-solid fa-barcode text-red" style="font-size: 1.9em; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 10px var(--clr-red-glow));"></i>
+                        <h5 style="font-size: 0.85em; margin: 0;">Digitize Tracking</h5>
+                    </div>
+                    <div class="box box-top">
+                        <i class="fa-solid fa-bell text-red" style="font-size: 1.9em; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 10px var(--clr-red-glow));"></i>
+                        <h5 style="font-size: 0.85em; margin: 0;">Automate Alerts</h5>
+                    </div>
+                    <div class="box box-top">
+                        <i class="fa-solid fa-chart-line text-red" style="font-size: 1.9em; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 10px var(--clr-red-glow));"></i>
+                        <h5 style="font-size: 0.85em; margin: 0;">Instant Reports</h5>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Our proposed solution is a Web-based Inventory Management System. It replaces manual workflows into a structured dashboard that digitizes tracking, automates low stock alerts, and generates business-critical reports instantly.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 6: HIGH-LEVEL ARCHITECTURE
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Technical Design</span>
+                <h2>High-Level Architecture</h2>
+                <span class="heading-rule"></span>
+
+                <div class="arch-flow">
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-user-circle"></i></div>
+                        <span>User<br>(Owner / Staff)</span>
+                    </div>
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <span class="arch-connector-label">HTTPS</span>
+                    </div>
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-brands fa-chrome"></i></div>
+                        <span>Web<br>Application</span>
+                    </div>
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <span class="arch-connector-label">API Calls</span>
+                    </div>
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-server"></i></div>
+                        <span>Server<br>Logic</span>
+                    </div>
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <span class="arch-connector-label">SQL</span>
+                    </div>
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-database"></i></div>
+                        <span>Cloud<br>Database</span>
+                    </div>
+                </div>
+
+                <p style="font-size: 0.56em; margin-top: 22px; text-align: center;" class="text-dim">
+                    Users interact via browser → Next.js server processes secure requests → Supabase handles data storage
+                </p>
+
+                <aside class="notes">
+                    From an architectural standpoint, we use a standard client-server model. Users log in through a web browser, communicating with our server logic, which securely reads and writes inventory data from a centralized cloud database.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 7: MoSCoW OVERVIEW
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Scope Management</span>
+                <h2>Scope &amp; Prioritization</h2>
+                <span class="heading-rule"></span>
+
+                <p class="text-dim" style="font-size: 0.72em; margin-bottom: 22px;">
+                    We use the <strong style="color:#dde3ed;">MoSCoW</strong> framework to manage scope and ensure core value is delivered first.
+                </p>
+
+                <div class="grid-2">
+                    <div class="box">
+                        <span class="moscow-tag tag-m">Must Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Non-negotiable core functionality required for the system to operate.</p>
+                    </div>
+                    <div class="box box-gold">
+                        <span class="moscow-tag tag-s">Should Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Important, high-value features that enhance operational efficiency.</p>
+                    </div>
+                    <div class="box box-blue">
+                        <span class="moscow-tag tag-c">Could Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Nice-to-have features for future sprints if time permits.</p>
+                    </div>
+                    <div class="box box-gray">
+                        <span class="moscow-tag tag-w">Won't Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Out of scope for this term's delivery.</p>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    To manage our development time actively, we utilized the MoSCoW prioritization framework. This guarantees that basic functional needs are met before adding complex enhancements.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 8: MUST HAVE
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Priority: Critical</span>
+                <h2>
+                    <span class="moscow-tag tag-m" style="font-size: 0.38em; vertical-align: middle; margin-right: 10px;">Must Have</span>
+                    Features
+                </h2>
+                <span class="heading-rule"></span>
+
+                <div class="box" style="margin-top: 16px;">
+                    <ul class="styled-list">
+                        <li><i class="fa-solid fa-lock"></i> User login &amp; authentication <span class="req-badge">FR-01</span></li>
+                        <li><i class="fa-solid fa-folder-plus"></i> Create product records (brand, size, tread) <span class="req-badge">FR-03, 04</span></li>
+                        <li><i class="fa-solid fa-boxes-packing"></i> Record stock-in and stock-out logs <span class="req-badge">FR-05, 06</span></li>
+                        <li><i class="fa-solid fa-desktop"></i> Real-time inventory quantity display <span class="req-badge">FR-07</span></li>
+                        <li><i class="fa-solid fa-chart-bar"></i> Analytics dashboard overview <span class="req-badge">FR-08</span></li>
+                        <li><i class="fa-regular fa-file-lines"></i> Generate daily inventory reports <span class="req-badge">FR-09</span></li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Our Must-Haves include the foundation: secure login, creating products like tires with specific treads and sizes, logging stock-in/out, viewing real time quantities, and generating simple daily reports.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 9: SHOULD HAVE
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Priority: Important</span>
+                <h2>
+                    <span class="moscow-tag tag-s" style="font-size: 0.38em; vertical-align: middle; margin-right: 10px;">Should Have</span>
+                    Features
+                </h2>
+                <span class="heading-rule"></span>
+
+                <div class="box box-gold" style="margin-top: 16px;">
+                    <ul class="styled-list">
+                        <li><i class="fa-solid fa-users-gear" style="color:var(--clr-gold)"></i> Staff account management <span class="req-badge">FR-02</span></li>
+                        <li><i class="fa-solid fa-calendar-week" style="color:var(--clr-gold)"></i> Weekly/Monthly sales reports <span class="req-badge">FR-10, 11</span></li>
+                        <li><i class="fa-solid fa-filter" style="color:var(--clr-gold)"></i> Advanced filtering (brand, size) <span class="req-badge">FR-12</span></li>
+                        <li><i class="fa-solid fa-arrow-up-right-dots" style="color:var(--clr-gold)"></i> Top-selling / Slow-moving analytics <span class="req-badge">FR-13, 14</span></li>
+                        <li><i class="fa-solid fa-coins" style="color:var(--clr-gold)"></i> Revenue &amp; gross profit computation <span class="req-badge">FR-15, 16</span></li>
+                        <li><i class="fa-solid fa-bell-exclamation" style="color:var(--clr-gold)"></i> Low-stock &amp; dead-stock alerts (60 days) <span class="req-badge">FR-21, 22</span></li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Our Should-Haves focus on business intelligence: staff management, deeper filtering, identifying top-selling versus dead stock tires, automating profit computation, and critical low-stock threshold alerts.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 10: COULD & WON'T HAVE
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Remaining Scope</span>
+                <h2>Could &amp; Won't Have</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-2" style="margin-top: 18px;">
+                    <div class="box box-blue">
+                        <h4 style="color: var(--clr-blue); font-size: 0.82em; margin-bottom: 14px;">
+                            <i class="fa-solid fa-circle-plus" style="margin-right:8px;"></i>Could Have (Bonus)
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li><i class="fa-solid fa-chart-line" style="color:var(--clr-blue)"></i> Chart visualizations</li>
+                            <li><i class="fa-solid fa-file-pdf"  style="color:var(--clr-blue)"></i> Export to PDF / Excel</li>
+                            <li><i class="fa-solid fa-mobile-screen" style="color:var(--clr-blue)"></i> Mobile-responsive UI</li>
+                            <li><i class="fa-solid fa-calculator"    style="color:var(--clr-blue)"></i> Inventory value algorithms</li>
+                        </ul>
+                    </div>
+                    <div class="box box-gray">
+                        <h4 style="color: #64748b; font-size: 0.82em; margin-bottom: 14px;">
+                            <i class="fa-solid fa-ban" style="margin-right:8px;"></i>Won't Have (This Term)
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> E-commerce / Online orders</li>
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> Customer-facing portals</li>
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> Multi-branch support</li>
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> Native mobile app</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    If time permits, we Could Have PDF exports and mobile responsiveness. However, we explicitly Won't Have e-commerce, customer portals, or multi-branch support this semester to ensure highest quality on the core inventory system.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 11: NON-FUNCTIONAL REQUIREMENTS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Quality Standards</span>
+                <h2>Non-Functional Requirements</h2>
+                <span class="heading-rule"></span>
+
+                <div class="box" style="margin-top: 16px; padding: 8px 22px;">
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="nfr-content">
+                            <strong>Performance</strong>
+                            <span>Dashboard loads within 5 seconds.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-01</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="nfr-content">
+                            <strong>Security</strong>
+                            <span>Strict authentication required before access.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-02</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-face-smile"></i></div>
+                        <div class="nfr-content">
+                            <strong>Usability</strong>
+                            <span>Staff can operate UI with minimal training.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-03</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-check-double"></i></div>
+                        <div class="nfr-content">
+                            <strong>Reliability</strong>
+                            <span>Accurate consistency during simultaneous operations.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-04</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-server"></i></div>
+                        <div class="nfr-content">
+                            <strong>Availability</strong>
+                            <span>Uptime at least 99% during business hours.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-05</span>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Beyond features, the system must perform well. It will load dashboards under 5 seconds, mandate secure logins, be user-friendly for standard staff, remain reliably consistent during multiple records, and maintain 99% uptime during operational hours.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 12: DEVELOPMENT PROCESS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">How We Work</span>
+                <h2>Iterative Development Process</h2>
+                <span class="heading-rule"></span>
+
+                <p class="text-dim" style="font-size: 0.70em;">Building in iterative, incremental mini-sprints for continuous improvement.</p>
+
+                <div class="process-flow">
+                    <div class="step">
+                        <div class="bubble">
+                            <span class="step-num">1</span>
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <span>Requirements</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble">
+                            <span class="step-num">2</span>
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+                        <span>Design</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble">
+                            <span class="step-num">3</span>
+                            <i class="fa-solid fa-object-group"></i>
+                        </div>
+                        <span>Prototype</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble">
+                            <span class="step-num">4</span>
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span>Develop</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble">
+                            <span class="step-num">5</span>
+                            <i class="fa-solid fa-vial-circle-check"></i>
+                        </div>
+                        <span>Testing</span>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    We use an iterative mini-sprint approach. Going from requirements capturing, to system design, prototyping, development, and stringent testing in a repeating cycle.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 13: TOOLS & TECHNOLOGIES
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Our Stack</span>
+                <h2>Tools &amp; Technologies</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-4" style="margin-top: 22px;">
+                    <div class="tech-card">
+                        <i class="fa-brands fa-react" style="color: #61dafb;"></i>
+                        <span class="tech-name">Next.js</span>
+                        <span class="tech-role">Frontend &amp; Backend</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-solid fa-database" style="color: #3ecf8e;"></i>
+                        <span class="tech-name">Supabase</span>
+                        <span class="tech-role">Database &amp; Auth</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-solid fa-diagram-project" style="color: #fca311;"></i>
+                        <span class="tech-name">Draw.io</span>
+                        <span class="tech-role">System Design</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-brands fa-github" style="color: #ffffff;"></i>
+                        <span class="tech-name">GitHub</span>
+                        <span class="tech-role">Version Control</span>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Our technology stack leverages Next.js for both frontend and backend logic. We use Supabase for our robust database and authentication, Draw.io for system diagrams, and GitHub to manage version control securely.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 14: TEAM ROLES
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">The People</span>
+                <h2>Team HULE — Roles</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-2" style="margin-top: 16px; gap: 14px;">
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-user-tie text-red" style="margin-right:9px;"></i>
+                        <strong>Project Manager</strong>
+                        <br><small class="text-dim">Coordinates tasks, scope, and deadlines.</small>
+                    </div>
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-magnifying-glass text-red" style="margin-right:9px;"></i>
+                        <strong>Requirements Analyst</strong>
+                        <br><small class="text-dim">Elicits and documents client needs.</small>
+                    </div>
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-palette text-red" style="margin-right:9px;"></i>
+                        <strong>UI/UX Designer</strong>
+                        <br><small class="text-dim">Designs interface layouts and flows.</small>
+                    </div>
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-laptop-code text-red" style="margin-right:9px;"></i>
+                        <strong>Developer(s)</strong>
+                        <br><small class="text-dim">Implements code — Frontend &amp; Backend.</small>
+                    </div>
+                </div>
+
+                <div class="box box-top" style="margin-top: 14px; font-size: 0.88em;">
+                    <i class="fa-solid fa-clipboard-check text-red" style="margin-right:9px;"></i>
+                    <strong>Tester / Documentation</strong>
+                    <br><small class="text-dim">Validates software and compiles project manuals.</small>
+                </div>
+
+                <aside class="notes">
+                    Our success relies on structured roles. We have designated members handling project management, analyzing requirements, creating UI/UX designs, writing the actual code blocks, and finally testing and documenting the final deliverable.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 15: RISKS & NEXT STEPS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Looking Ahead</span>
+                <h2>Risks &amp; Next Steps</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-2" style="margin-top: 18px;">
+                    <div class="box">
+                        <h4 style="font-size: 0.85em; color: var(--clr-red); margin-bottom: 14px;">
+                            <i class="fa-solid fa-triangle-exclamation" style="margin-right:8px;"></i>Risks &amp; Mitigation
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li>
+                                <i class="fa-solid fa-clock text-red"></i>
+                                <span>
+                                    <strong>Risk:</strong> Limited dev time &amp; complex data modeling.
+                                    <br><span class="text-dim"><strong>Mitigation:</strong> Strict adherence to MoSCoW.</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-graduation-cap text-red"></i>
+                                <span>
+                                    <strong>Risk:</strong> Learning curve on new tech.
+                                    <br><span class="text-dim"><strong>Mitigation:</strong> Early framework familiarization.</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box box-green">
+                        <h4 style="font-size: 0.85em; color: var(--clr-green); margin-bottom: 14px;">
+                            <i class="fa-solid fa-forward-step" style="margin-right:8px;"></i>Next Deliverables
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li style="margin-bottom: 12px;">
+                                <i class="fa-regular fa-square-check" style="color:var(--clr-green)"></i> Requirements Documentation
+                            </li>
+                            <li style="margin-bottom: 12px;">
+                                <i class="fa-solid fa-sitemap" style="color:var(--clr-green)"></i> System Design Diagrams
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-desktop" style="color:var(--clr-green)"></i> Prototype UI
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    We recognize the risks of limited development time and learning new frameworks. We will mitigate this through strict scope control. Moving forward, our next deliverables are formal documentation, diagrams, and our first UI prototype.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 16: CLOSING
+            ============================================================ -->
+            <section>
+                <div class="closing-ring">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <h1 style="font-size: 3em; margin: 0 0 0.1em;">
+                    <span class="gradient-text">Thank You!</span>
+                </h1>
+                <h3 style="font-weight: 400; color: var(--clr-muted); margin: 10px 0 0;">
+                    Questions &amp; Open Discussion
+                </h3>
+                <div class="title-divider"></div>
+                <p style="font-size: 0.6em; color: var(--clr-muted);">
+                    <strong style="color: #b0c4d8;">Team HULE</strong> &nbsp;·&nbsp;
+                    Jhaerin Tire Supply Inventory Management &nbsp;·&nbsp;
+                    CSP312 &nbsp;·&nbsp; S.Y. 2026–2027
+                </p>
+
+                <aside class="notes">
+                    Thank you so much for your time and attention today. We are Team Hule, and we now open the floor to any questions you may have about our pitch!
+                </aside>
+            </section>
         </div>
     </div>
 
@@ -717,25 +1300,7 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(event) {
-            const match = window.location.pathname.match(/slide_(\d+)\.html/);
-            if (!match) return;
-            const currentSlide = parseInt(match[1], 10);
-            let nextSlide = null;
-            
-            if (event.key === 'ArrowRight' || event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') {
-                nextSlide = currentSlide + 1;
-            } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp' || event.key === 'PageUp') {
-                nextSlide = currentSlide - 1;
-            }
-            
-            if (nextSlide !== null && nextSlide >= 1 && nextSlide <= 16) {
-                const num = nextSlide.toString().padStart(2, '0');
-                window.location.href = 'slide_' + num + '.html';
-            }
-        });
-    </script>
+    
 
 </body>
 </html>
