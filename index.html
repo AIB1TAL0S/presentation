@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
 
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -24,29 +27,30 @@
             --r-heading-font: 'Montserrat', sans-serif;
             --r-main-color: #dde3ed;
             --r-heading-color: #ffffff;
-            --r-background-color: #111317; /* Asphalt/Carbon */
+            --r-background-color: #111317;
+            /* Asphalt/Carbon */
             --r-selection-background-color: #c1121f;
             --r-link-color: #ef233c;
 
             /* Brand palette */
-            --clr-red:        #ef233c;
-            --clr-red-dark:   #b6101c;
-            --clr-red-glow:   rgba(229, 21, 40, 0.4);
-            --clr-red-faint:  rgba(239, 35, 60, 0.08);
-            --clr-gold:       #ffb703;
-            --clr-gold-glow:  rgba(252, 163, 17, 0.35);
-            --clr-blue:       #5fa8d3;
-            --clr-blue-dark:  #2d6283;
-            --clr-green:      #3ecf8e;
-            --clr-muted:      #7d8fa3;
-            --clr-text:       #dde3ed;
-            --clr-text-dim:   #9aafc4;
+            --clr-red: #ef233c;
+            --clr-red-dark: #b6101c;
+            --clr-red-glow: rgba(229, 21, 40, 0.4);
+            --clr-red-faint: rgba(239, 35, 60, 0.08);
+            --clr-gold: #ffb703;
+            --clr-gold-glow: rgba(252, 163, 17, 0.35);
+            --clr-blue: #5fa8d3;
+            --clr-blue-dark: #2d6283;
+            --clr-green: #3ecf8e;
+            --clr-muted: #7d8fa3;
+            --clr-text: #dde3ed;
+            --clr-text-dim: #9aafc4;
 
             /* Surfaces */
-            --surface-1: rgba(255,255,255,0.055);
-            --surface-2: rgba(255,255,255,0.03);
-            --border:    rgba(255,255,255,0.08);
-            --border-bright: rgba(255,255,255,0.14);
+            --surface-1: rgba(255, 255, 255, 0.055);
+            --surface-2: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-bright: rgba(255, 255, 255, 0.14);
 
             /* Spacing */
             --gap-sm: 14px;
@@ -64,36 +68,47 @@
         /* Streamlined tire-tread background pattern */
         .reveal .slides {
             background-color: var(--r-background-color);
-            background-image: 
-                repeating-linear-gradient(
-                    -45deg,
-                    rgba(255,255,255,0.015) 0,
-                    rgba(255,255,255,0.015) 2px,
+            background-image:
+                repeating-linear-gradient(-45deg,
+                    rgba(255, 255, 255, 0.015) 0,
+                    rgba(255, 255, 255, 0.015) 2px,
                     transparent 2px,
-                    transparent 12px
-                ),
-                repeating-linear-gradient(
-                    45deg,
-                    rgba(255,255,255,0.015) 0,
-                    rgba(255,255,255,0.015) 2px,
+                    transparent 12px),
+                repeating-linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.015) 0,
+                    rgba(255, 255, 255, 0.015) 2px,
                     transparent 2px,
-                    transparent 12px
-                );
+                    transparent 12px);
             background-size: 60px 60px;
         }
 
-        .reveal h1, .reveal h2, .reveal h3,
-        .reveal h4, .reveal h5, .reveal h6 {
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5,
+        .reveal h6 {
             font-weight: 800;
             text-transform: none;
             letter-spacing: -0.03em;
             line-height: 1.2;
         }
-        .reveal h2 { font-size: 1.75em; margin-bottom: 0.15em; }
-        .reveal p   { margin: 0; }
+
+        .reveal h2 {
+            font-size: 1.75em;
+            margin-bottom: 0.15em;
+        }
+
+        .reveal p {
+            margin: 0;
+        }
 
         /* Progress bar */
-        .reveal .progress { height: 3px; background: rgba(239,35,60,0.15); }
+        .reveal .progress {
+            height: 3px;
+            background: rgba(239, 35, 60, 0.15);
+        }
+
         .reveal .progress span {
             background: linear-gradient(90deg, var(--clr-red-dark), var(--clr-red), #ff6b7a);
             box-shadow: 0 0 12px var(--clr-red-glow);
@@ -114,29 +129,44 @@
             position: relative;
             overflow: hidden;
         }
+
         .reveal .slides section::after {
             content: '';
             position: absolute;
             width: 380px;
             height: 380px;
             border-radius: 50%;
-            border: 24px dashed rgba(255,255,255,0.02);
+            border: 24px dashed rgba(255, 255, 255, 0.02);
             top: -120px;
             right: -120px;
             pointer-events: none;
-            box-shadow: inset 0 0 0 10px rgba(239,35,60,0.03),
-                        0 0 0 40px rgba(239,35,60,0.02);
-            background: radial-gradient(circle, transparent 50%, rgba(239,35,60,0.02) 70%, transparent 100%);
+            box-shadow: inset 0 0 0 10px rgba(239, 35, 60, 0.03),
+                0 0 0 40px rgba(239, 35, 60, 0.02);
+            background: radial-gradient(circle, transparent 50%, rgba(239, 35, 60, 0.02) 70%, transparent 100%);
         }
 
         /* =============================================
            UTILITY CLASSES
         ============================================= */
-        .text-red   { color: var(--clr-red)   !important; }
-        .text-muted { color: var(--clr-muted)  !important; }
-        .text-green { color: var(--clr-green)  !important; }
-        .text-gold  { color: var(--clr-gold)   !important; }
-        .text-dim   { color: var(--clr-text-dim) !important; }
+        .text-red {
+            color: var(--clr-red) !important;
+        }
+
+        .text-muted {
+            color: var(--clr-muted) !important;
+        }
+
+        .text-green {
+            color: var(--clr-green) !important;
+        }
+
+        .text-gold {
+            color: var(--clr-gold) !important;
+        }
+
+        .text-dim {
+            color: var(--clr-text-dim) !important;
+        }
 
         .gradient-text {
             background: linear-gradient(130deg, #ffffff 20%, var(--clr-red) 100%);
@@ -180,49 +210,91 @@
             border: 1px solid var(--border);
             border-left: 3px solid var(--clr-red);
             box-shadow:
-                0 8px 30px rgba(0,0,0,0.35),
-                inset 0 1px 0 rgba(255,255,255,0.06);
+                0 8px 30px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
             position: relative;
             overflow: hidden;
         }
+
         /* Streamlined Racing Texture */
         .box::after {
             content: '';
             position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background: repeating-linear-gradient(
-                -45deg,
-                transparent,
-                transparent 5px,
-                rgba(255,255,255,0.015) 5px,
-                rgba(255,255,255,0.015) 10px
-            );
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: repeating-linear-gradient(-45deg,
+                    transparent,
+                    transparent 5px,
+                    rgba(255, 255, 255, 0.015) 5px,
+                    rgba(255, 255, 255, 0.015) 10px);
             pointer-events: none;
             z-index: 0;
         }
-        .box > * { position: relative; z-index: 1; }
+
+        .box>* {
+            position: relative;
+            z-index: 1;
+        }
+
         /* Inner top highlight */
         .box::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 1px;
-            background: linear-gradient(90deg, rgba(255,255,255,0.10), transparent 70%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.10), transparent 70%);
         }
 
         /* Accent color variants */
-        .box-gold  { border-left-color: var(--clr-gold); }
-        .box-blue  { border-left-color: var(--clr-blue); }
-        .box-green { border-left-color: var(--clr-green); }
-        .box-gray  { border-left-color: #4a5568; }
-        .box-top   { border-left: none; border-top: 3px solid var(--clr-red); text-align: center; }
+        .box-gold {
+            border-left-color: var(--clr-gold);
+        }
+
+        .box-blue {
+            border-left-color: var(--clr-blue);
+        }
+
+        .box-green {
+            border-left-color: var(--clr-green);
+        }
+
+        .box-gray {
+            border-left-color: #4a5568;
+        }
+
+        .box-top {
+            border-left: none;
+            border-top: 3px solid var(--clr-red);
+            text-align: center;
+        }
 
         /* =============================================
            GRID LAYOUTS
         ============================================= */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-md); text-align: left; align-items: stretch; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--gap-md); text-align: center; }
-        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap-sm); }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--gap-md);
+            text-align: left;
+            align-items: stretch;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--gap-md);
+            text-align: center;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--gap-sm);
+        }
 
         /* =============================================
            STYLED LISTS
@@ -232,6 +304,7 @@
             padding: 0;
             margin: 0;
         }
+
         ul.styled-list li {
             margin-bottom: 13px;
             display: flex;
@@ -240,6 +313,7 @@
             line-height: 1.5;
             color: var(--clr-text);
         }
+
         ul.styled-list li i {
             margin-top: 3px;
             margin-right: 13px;
@@ -263,15 +337,35 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
-        .tag-m { background: linear-gradient(135deg, var(--clr-red), var(--clr-red-dark)); color: #fff; box-shadow: 0 2px 12px var(--clr-red-glow); }
-        .tag-s { background: linear-gradient(135deg, var(--clr-gold), #e08900);            color: #111; box-shadow: 0 2px 12px var(--clr-gold-glow); }
-        .tag-c { background: linear-gradient(135deg, var(--clr-blue), var(--clr-blue-dark)); color: #fff; box-shadow: 0 2px 10px rgba(95,168,211,0.35); }
-        .tag-w { background: #1e2535; color: #64748b; border: 1px solid rgba(100,116,139,0.2); }
+
+        .tag-m {
+            background: linear-gradient(135deg, var(--clr-red), var(--clr-red-dark));
+            color: #fff;
+            box-shadow: 0 2px 12px var(--clr-red-glow);
+        }
+
+        .tag-s {
+            background: linear-gradient(135deg, var(--clr-gold), #e08900);
+            color: #111;
+            box-shadow: 0 2px 12px var(--clr-gold-glow);
+        }
+
+        .tag-c {
+            background: linear-gradient(135deg, var(--clr-blue), var(--clr-blue-dark));
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(95, 168, 211, 0.35);
+        }
+
+        .tag-w {
+            background: #1e2535;
+            color: #64748b;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
 
         /* Requirement badge */
         .req-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.07);
+            background: rgba(255, 255, 255, 0.07);
             padding: 2px 7px;
             border-radius: 4px;
             font-size: 0.68em;
@@ -294,32 +388,66 @@
             height: 130px;
             margin: 0 auto 10px;
         }
+
         .icon-ring-wrapper .ring {
             position: absolute;
             border-radius: 50%;
-            border: 3px dashed rgba(239,35,60,0.3);
+            border: 3px dashed rgba(239, 35, 60, 0.3);
             animation: ringSpin 8s linear infinite;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        .icon-ring-wrapper .ring-1 { width: 84px;  height: 84px;  animation-duration: 6s; }
-        .icon-ring-wrapper .ring-2 { width: 110px; height: 110px; animation-duration: 9s; animation-direction: reverse; border-color: rgba(239,35,60,0.15); border-width: 2px;}
-        .icon-ring-wrapper .ring-3 { width: 136px; height: 136px; animation-duration: 12s; border-color: rgba(255,255,255,0.08); border-width: 4px;}
-        .icon-ring-wrapper > i {
+
+        .icon-ring-wrapper .ring-1 {
+            width: 84px;
+            height: 84px;
+            animation-duration: 6s;
+        }
+
+        .icon-ring-wrapper .ring-2 {
+            width: 110px;
+            height: 110px;
+            animation-duration: 9s;
+            animation-direction: reverse;
+            border-color: rgba(239, 35, 60, 0.15);
+            border-width: 2px;
+        }
+
+        .icon-ring-wrapper .ring-3 {
+            width: 136px;
+            height: 136px;
+            animation-duration: 12s;
+            border-color: rgba(255, 255, 255, 0.08);
+            border-width: 4px;
+        }
+
+        .icon-ring-wrapper>i {
             position: relative;
             z-index: 2;
             font-size: 2.3em;
             color: var(--clr-red);
-            filter: drop-shadow(0 0 14px rgba(239,35,60,0.7));
+            filter: drop-shadow(0 0 14px rgba(239, 35, 60, 0.7));
         }
 
         @keyframes ringPulse {
-            0%,100% { transform: scale(1);    opacity: 1; }
-            50%      { transform: scale(1.06); opacity: 0.55; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.06);
+                opacity: 0.55;
+            }
         }
+
         @keyframes ringSpin {
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
 
         /* =============================================
@@ -331,6 +459,7 @@
             background: linear-gradient(90deg, transparent, var(--clr-red), transparent);
             margin: 18px auto;
         }
+
         .title-meta {
             display: flex;
             justify-content: center;
@@ -338,6 +467,7 @@
             flex-wrap: wrap;
             margin-top: 8px;
         }
+
         .meta-item {
             display: flex;
             align-items: center;
@@ -345,8 +475,14 @@
             font-size: 0.62em;
             color: var(--clr-text-dim);
         }
-        .meta-item i { color: var(--clr-red); }
-        .meta-item strong { color: #c8d6e5; }
+
+        .meta-item i {
+            color: var(--clr-red);
+        }
+
+        .meta-item strong {
+            color: #c8d6e5;
+        }
 
         /* =============================================
            VISION QUOTE
@@ -363,13 +499,14 @@
             border-radius: 0 10px 10px 0;
             text-align: left;
         }
+
         .vision-quote::before {
             content: '\201C';
             position: absolute;
             top: -12px;
             left: 12px;
             font-size: 5em;
-            color: rgba(239,35,60,0.18);
+            color: rgba(239, 35, 60, 0.18);
             font-family: Georgia, serif;
             line-height: 1;
         }
@@ -388,26 +525,33 @@
             border: 1px solid var(--border);
             gap: 0;
         }
+
         .arch-node {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex: 1;
         }
+
         .arch-node-icon {
             width: 66px;
             height: 66px;
             border-radius: 50%;
-            background: rgba(239,35,60,0.10);
-            border: 2px solid rgba(239,35,60,0.28);
+            background: rgba(239, 35, 60, 0.10);
+            border: 2px solid rgba(239, 35, 60, 0.28);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 11px;
-            box-shadow: 0 0 18px rgba(239,35,60,0.14);
+            box-shadow: 0 0 18px rgba(239, 35, 60, 0.14);
         }
-        .arch-node-icon i { font-size: 1.5em; color: var(--clr-red); }
-        .arch-node > span {
+
+        .arch-node-icon i {
+            font-size: 1.5em;
+            color: var(--clr-red);
+        }
+
+        .arch-node>span {
             font-size: 0.58em;
             font-weight: 700;
             text-align: center;
@@ -415,6 +559,7 @@
             letter-spacing: 0.03em;
             line-height: 1.4;
         }
+
         .arch-connector {
             flex: 0 0 auto;
             display: flex;
@@ -423,20 +568,23 @@
             padding: 0 4px;
             padding-bottom: 22px;
         }
+
         .arch-connector-line {
             width: 44px;
             height: 2px;
-            background: linear-gradient(90deg, rgba(239,35,60,0.55), rgba(239,35,60,0.18));
+            background: linear-gradient(90deg, rgba(239, 35, 60, 0.55), rgba(239, 35, 60, 0.18));
             position: relative;
         }
+
         .arch-connector-line::after {
             content: '';
             position: absolute;
             right: -5px;
             top: -4px;
             border: 5px solid transparent;
-            border-left-color: rgba(239,35,60,0.5);
+            border-left-color: rgba(239, 35, 60, 0.5);
         }
+
         .arch-connector-label {
             font-size: 0.42em;
             color: var(--clr-muted);
@@ -454,16 +602,18 @@
             margin-top: 46px;
             gap: 0;
         }
+
         .step {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex: 1;
         }
+
         .step .bubble {
             width: 72px;
             height: 72px;
-            background: linear-gradient(135deg, rgba(239,35,60,0.14), rgba(239,35,60,0.04));
+            background: linear-gradient(135deg, rgba(239, 35, 60, 0.14), rgba(239, 35, 60, 0.04));
             border: 2px solid var(--clr-red);
             border-radius: 50%;
             display: flex;
@@ -473,8 +623,9 @@
             color: var(--clr-red);
             margin-bottom: 12px;
             position: relative;
-            box-shadow: 0 0 18px rgba(239,35,60,0.18);
+            box-shadow: 0 0 18px rgba(239, 35, 60, 0.18);
         }
+
         .step .step-num {
             position: absolute;
             top: -7px;
@@ -491,7 +642,8 @@
             color: #fff;
             font-family: 'Montserrat', sans-serif;
         }
-        .step > span {
+
+        .step>span {
             font-size: 0.52em;
             text-transform: uppercase;
             font-weight: 700;
@@ -499,10 +651,11 @@
             letter-spacing: 0.6px;
             text-align: center;
         }
+
         .step-connector {
             width: 32px;
             height: 2px;
-            background: linear-gradient(90deg, rgba(239,35,60,0.4), rgba(239,35,60,0.08));
+            background: linear-gradient(90deg, rgba(239, 35, 60, 0.4), rgba(239, 35, 60, 0.08));
             flex-shrink: 0;
             position: relative;
             top: -20px;
@@ -516,15 +669,19 @@
             align-items: center;
             gap: 14px;
             padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .nfr-row:last-child { border-bottom: none; }
+
+        .nfr-row:last-child {
+            border-bottom: none;
+        }
+
         .nfr-icon {
             width: 38px;
             height: 38px;
             border-radius: 10px;
-            background: rgba(239,35,60,0.10);
-            border: 1px solid rgba(239,35,60,0.2);
+            background: rgba(239, 35, 60, 0.10);
+            border: 1px solid rgba(239, 35, 60, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -532,14 +689,28 @@
             color: var(--clr-red);
             font-size: 0.95em;
         }
-        .nfr-content { flex: 1; font-size: 0.70em; }
-        .nfr-content strong { display: block; font-weight: 700; margin-bottom: 1px; color: #dde3ed; }
-        .nfr-content span   { color: var(--clr-muted); }
+
+        .nfr-content {
+            flex: 1;
+            font-size: 0.70em;
+        }
+
+        .nfr-content strong {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 1px;
+            color: #dde3ed;
+        }
+
+        .nfr-content span {
+            color: var(--clr-muted);
+        }
+
         .nfr-badge {
             font-family: 'Roboto Mono', monospace;
             font-size: 0.58em;
             color: var(--clr-muted);
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
             padding: 2px 8px;
             border-radius: 4px;
             flex-shrink: 0;
@@ -562,24 +733,47 @@
             position: relative;
             overflow: hidden;
         }
+
         .tech-card::after {
             content: '';
             position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255,255,255,0.015) 5px, rgba(255,255,255,0.015) 10px);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.015) 5px, rgba(255, 255, 255, 0.015) 10px);
             pointer-events: none;
             z-index: 0;
         }
-        .tech-card > * { position: relative; z-index: 1; }
-        .tech-card i { font-size: 2.6em; margin-bottom: 11px; }
-        .tech-card .tech-name { font-size: 0.72em; font-weight: 700; margin-bottom: 3px; color: #dde3ed; }
-        .tech-card .tech-role { font-size: 0.55em; color: var(--clr-muted); }
+
+        .tech-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-card i {
+            font-size: 2.6em;
+            margin-bottom: 11px;
+        }
+
+        .tech-card .tech-name {
+            font-size: 0.72em;
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: #dde3ed;
+        }
+
+        .tech-card .tech-role {
+            font-size: 0.55em;
+            color: var(--clr-muted);
+        }
 
         /* =============================================
            CLOSING SLIDE RING
         ============================================= */
         .closing-ring {
-            position: relative; /* must be set for ::before/::after positioning */
+            position: relative;
+            /* must be set for ::before/::after positioning */
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -587,7 +781,9 @@
             height: 150px;
             margin-bottom: 16px;
         }
-        .closing-ring::before, .closing-ring::after {
+
+        .closing-ring::before,
+        .closing-ring::after {
             content: '';
             position: absolute;
             border-radius: 50%;
@@ -595,610 +791,714 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
         .closing-ring::before {
             width: 110px;
             height: 110px;
-            border: 4px dashed rgba(239,35,60,0.28);
+            border: 4px dashed rgba(239, 35, 60, 0.28);
             animation: ringSpin 6s linear infinite;
         }
+
         .closing-ring::after {
             width: 146px;
             height: 146px;
-            border: 2px solid rgba(255,255,255,0.10);
+            border: 2px solid rgba(255, 255, 255, 0.10);
             animation: ringPulse 2.5s ease-in-out infinite 0.6s;
         }
-        .closing-ring > i {
+
+        .closing-ring>i {
             position: relative;
             z-index: 2;
             font-size: 3em;
             color: var(--clr-red);
-            filter: drop-shadow(0 0 18px rgba(239,35,60,0.7));
+            filter: drop-shadow(0 0 18px rgba(239, 35, 60, 0.7));
         }
 
-    
+
         /* =============================================
            RESPONSIVE MOBILE STACKING
         ============================================= */
         @media screen and (max-width: 900px) {
-            .grid-2, .grid-3, .grid-4 { 
-                grid-template-columns: 1fr !important; 
+
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr !important;
                 gap: 16px;
             }
-            .arch-flow, .process-flow { 
-                flex-direction: column; 
-                gap: 16px; 
+
+            .arch-flow,
+            .process-flow {
+                flex-direction: column;
+                gap: 16px;
             }
-            .arch-node { 
-                flex-direction: row; 
-                gap: 15px; 
+
+            .arch-node {
+                flex-direction: row;
+                gap: 15px;
                 width: auto;
                 text-align: left;
-                align-items: center; 
+                align-items: center;
             }
-            .arch-connector { display: none; }
-            .arch-node-icon { margin-bottom: 0; width: 44px; height: 44px; }
-            .step { 
-                flex-direction: row; 
-                width: 100%; 
-                justify-content: flex-start; 
-                gap: 15px; 
+
+            .arch-connector {
+                display: none;
+            }
+
+            .arch-node-icon {
+                margin-bottom: 0;
+                width: 44px;
+                height: 44px;
+            }
+
+            .step {
+                flex-direction: row;
+                width: 100%;
+                justify-content: flex-start;
+                gap: 15px;
                 padding: 10px;
                 background: var(--surface-1);
                 border-radius: 8px;
             }
-            .step .bubble { width: 44px; height: 44px; margin-bottom: 0; font-size: 0.8em; }
-            .step-connector { display: none; }
-            
-            .reveal .slides section::after { display: none; }
-            
-            .box { padding: 15px; border-bottom-right-radius: 12px; }
-            .reveal h1 { font-size: 1.8em; }
-            .reveal h2 { font-size: 1.4em; }
-            ul.styled-list li { font-size: 0.9em; }
+
+            .step .bubble {
+                width: 44px;
+                height: 44px;
+                margin-bottom: 0;
+                font-size: 0.8em;
+            }
+
+            .step-connector {
+                display: none;
+            }
+
+            .reveal .slides section::after {
+                display: none;
+            }
+
+            .box {
+                padding: 15px;
+                border-bottom-right-radius: 12px;
+            }
+
+            .reveal h1 {
+                font-size: 1.8em;
+            }
+
+            .reveal h2 {
+                font-size: 1.4em;
+            }
+
+            ul.styled-list li {
+                font-size: 0.9em;
+            }
         }
     </style>
 
 </head>
+
 <body>
     <div class="reveal">
         <div class="slides">
+
+
             <!-- ============================================================
-                 SLIDE 01: TITLE
+                 SLIDE 1: TITLE
             ============================================================ -->
-            <section data-state="title-slide">
+            <section>
                 <div class="icon-ring-wrapper">
-                    <div class="ring ring-1"></div>
-                    <div class="ring ring-2"></div>
-                    <div class="ring ring-3"></div>
-                    <i class="fa-solid fa-tire"></i>
+                    <span class="ring ring-1"></span>
+                    <span class="ring ring-2"></span>
+                    <span class="ring ring-3"></span>
+                    <i class="fa-solid fa-circle-dot"></i>
                 </div>
-                
-                <span class="eyebrow" style="color: var(--clr-text-dim);">Business Pitch Presentation</span>
-                <h1 style="font-size: 2.8em; margin-bottom: 0.1em; line-height: 1.1;">
+
+                <span class="eyebrow">CSP312 — Software Engineering 1</span>
+                <h1 style="font-size: 2.3em; margin-bottom: 0.05em;">
                     <span class="gradient-text">Jhaerin Tire Supply</span>
                 </h1>
-                <h2 style="font-weight: 500; color: var(--clr-muted); font-size: 1.2em; margin-top: 0;">
+                <h3 style="font-weight: 500; font-size: 1.0em; color: #7d8fa3; margin-top: 0;">
                     Inventory Management System
-                </h2>
+                </h3>
 
                 <div class="title-divider"></div>
 
                 <div class="title-meta">
-                    <div class="meta-item">
-                        <i class="fa-solid fa-users"></i>
-                        <span>Presented by: <strong>Team HULE</strong></span>
+                    <div class="meta-item"><i class="fa-solid fa-users"></i><strong>Team HULE</strong></div>
+                    <div class="meta-item"><i class="fa-solid fa-graduation-cap"></i><strong>BSCS 2C</strong></div>
+                    <div class="meta-item"><i class="fa-solid fa-calendar-days"></i><strong>S.Y. 2026–2027</strong>
                     </div>
-                    <div class="meta-item">
-                        <i class="fa-solid fa-calendar-day"></i>
-                        <span>Date: <strong>SY 2026–2027</strong></span>
-                    </div>
+                    <div class="meta-item"><i class="fa-solid fa-store"></i>Client: <strong>April Joy Z.
+                            Altiche</strong></div>
                 </div>
 
                 <aside class="notes">
-                    Good day everyone! Welcome to Team HULE's presentation for the Jhaerin Tire Supply Inventory Management System. 
-                    We're excited to show you how we're modernizing inventory control for the automotive industry.
+                    Good morning everyone. We are Team HULE from BSCS 2C. Today we are pitching our project for Software
+                    Engineering 1: A web-based Inventory Management System built specifically for our client, Jhaerin
+                    Tire Supply.
                 </aside>
             </section>
+        
 
-            <!-- ============================================================
-                 SLIDE 02: PROBLEM STATEMENT
+<!-- ============================================================
+                 SLIDE 2: PROBLEM OVERVIEW
             ============================================================ -->
             <section>
                 <span class="eyebrow">The Challenge</span>
-                <h2>The Current Bottleneck</h2>
-                <div class="heading-rule"></div>
+                <h2>Problem Overview</h2>
+                <span class="heading-rule"></span>
 
-                <div class="grid-2">
+                <div class="grid-2" style="margin-top: 16px;">
                     <div class="box">
-                        <p class="text-red" style="font-weight: 800; font-size: 0.9em; margin-bottom: 10px;">
-                            <i class="fa-solid fa-triangle-exclamation"></i> Manual Tracking
-                        </p>
+                        <h4 style="font-size: 0.85em; margin-bottom: 14px; color: var(--clr-red);">
+                            <i class="fa-solid fa-circle-xmark" style="margin-right:8px;"></i>Current State
+                        </h4>
                         <ul class="styled-list">
-                            <li><i class="fa-solid fa-circle-xmark"></i> Reliance on scattered paper logs and basic spreadsheets.</li>
-                            <li><i class="fa-solid fa-circle-xmark"></i> High risk of human error during peak business hours.</li>
-                            <li><i class="fa-solid fa-circle-xmark"></i> Difficulty in generating instant, accurate reports.</li>
+                            <li><i class="fa-solid fa-book-open"></i> Manual, paper-based logbooks</li>
+                            <li><i class="fa-solid fa-file-excel"></i> Basic disconnected spreadsheets</li>
+                            <li><i class="fa-solid fa-layer-group"></i> Complex inventory: brands, sizes &amp; treads</li>
                         </ul>
                     </div>
-                    <div class="box box-gold">
-                        <p class="text-gold" style="font-weight: 800; font-size: 0.9em; margin-bottom: 10px;">
-                            <i class="fa-solid fa-hourglass-half"></i> Operational Delays
-                        </p>
+                    <div class="box">
+                        <h4 style="font-size: 0.85em; margin-bottom: 14px; color: var(--clr-red);">
+                            <i class="fa-solid fa-triangle-exclamation" style="margin-right:8px;"></i>The Impact
+                        </h4>
                         <ul class="styled-list">
-                            <li><i class="fa-solid fa-circle-xmark"></i> Time-consuming manual stock audits.</li>
-                            <li><i class="fa-solid fa-circle-xmark"></i> Frequent stockouts or overstocking on critical tire models.</li>
-                            <li><i class="fa-solid fa-circle-xmark"></i> Slower customer service due to data uncertainty.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <aside class="notes">
-                    Currently, Jhaerin Tire Supply faces significant bottlenecks. They rely on manual logs, leading to errors and delays in stock auditing. This results in either missing out on sales due to stockouts or tying up capital in overstock.
-                </aside>
-            </section>
-
-            <!-- ============================================================
-                 SLIDE 03: SOLUTION OVERVIEW
-            ============================================================ -->
-            <section>
-                <span class="eyebrow">The Innovation</span>
-                <h2>Our Solution</h2>
-                <div class="heading-rule"></div>
-
-                <div class="box box-top" style="margin-bottom: 25px;">
-                    <h3 style="font-size: 1.1em; color: var(--clr-red); margin-bottom: 8px;">Automated Inventory Intelligence</h3>
-                    <p style="font-size: 0.72em; color: var(--clr-text-dim);">A custom-built, centralized digital platform designed specifically for the unique workflow of tire supply management.</p>
-                </div>
-
-                <div class="grid-3">
-                    <div class="box box-gray">
-                        <i class="fa-solid fa-database" style="font-size: 1.4em; color: var(--clr-blue); margin-bottom: 10px;"></i>
-                        <h4 style="font-size: 0.6em; margin-bottom: 8px;">Centralized Database</h4>
-                        <p style="font-size: 0.52em; color: var(--clr-muted);">Unified record of every SKU, brand, and size across multiple branches.</p>
-                    </div>
-                    <div class="box box-gray">
-                        <i class="fa-solid fa-bolt" style="font-size: 1.4em; color: var(--clr-gold); margin-bottom: 10px;"></i>
-                        <h4 style="font-size: 0.6em; margin-bottom: 8px;">Real-Time Updates</h4>
-                        <p style="font-size: 0.52em; color: var(--clr-muted);">Instant reflection of sales and restock actions to maintain stock integrity.</p>
-                    </div>
-                    <div class="box box-gray">
-                        <i class="fa-solid fa-chart-line" style="font-size: 1.4em; color: var(--clr-green); margin-bottom: 10px;"></i>
-                        <h4 style="font-size: 0.6em; margin-bottom: 8px;">Smart Analytics</h4>
-                        <p style="font-size: 0.52em; color: var(--clr-muted);">Actionable insights into best-selling models and inventory health.</p>
-                    </div>
-                </div>
-
-                <aside class="notes">
-                    Our proposed solution is an Automated Inventory Intelligence platform. It centralizes all data, provides real-time updates, and offers smart analytics to help the business grow.
-                </aside>
-            </section>
-
-            <!-- ============================================================
-                 SLIDE 04: CORE OBJECTIVES
-            ============================================================ -->
-            <section>
-                <span class="eyebrow">Mission Parameters</span>
-                <h2>Project Objectives</h2>
-                <div class="heading-rule"></div>
-
-                <div class="grid-2">
-                    <div class="box box-green">
-                        <h3 style="font-size: 0.9em; margin-bottom: 12px;"><i class="fa-solid fa-bullseye"></i> Primary Goal</h3>
-                        <p style="font-size: 0.72em; line-height: 1.4; color: var(--clr-text);">
-                            To develop a robust and intuitive system that eliminates manual data entry bottlenecks and provides a 100% accurate, real-time view of inventory levels.
-                        </p>
-                    </div>
-                    <div>
-                        <ul class="styled-list">
-                            <li><i class="fa-solid fa-check-double"></i> <strong>Efficiency:</strong> Reduce stock-checking time by 75%.</li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <strong>Accuracy:</strong> Minimize discrepancies to less than 1%.</li>
-                            <li><i class="fa-solid fa-users-gear"></i> <strong>Usability:</strong> Ensure user-friendly interface for all staff.</li>
-                            <li><i class="fa-solid fa-file-export"></i> <strong>Reporting:</strong> One-click generation of audit reports.</li>
+                            <li><i class="fa-solid fa-xmark"></i> Lost entries &amp; miscounted stock</li>
+                            <li><i class="fa-solid fa-arrow-trend-down"></i> Frequent stockouts or over-ordering</li>
+                            <li><i class="fa-solid fa-calculator"></i> No instant financial summaries</li>
                         </ul>
                     </div>
                 </div>
 
                 <aside class="notes">
-                    The core objective is a system that is robust yet intuitive. We want to reduce stock-checking time by 75% and keep data discrepancies below 1%.
+                    The business currently uses manual logbooks and basic spreadsheets to manage their complex inventory of tires varying by brand, size, and tread. This outdated process results in lost records, miscounts, stockouts, and makes computing revenue and gross profit difficult without tedious manual calculation.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 05: SYSTEM VISION
+<!-- ============================================================
+                 SLIDE 3: STAKEHOLDERS & USERS
             ============================================================ -->
             <section>
-                <span class="eyebrow">The Vision</span>
-                <h2>Integrated Intelligence</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Who's Involved</span>
+                <h2>Stakeholders &amp; Users</h2>
+                <span class="heading-rule"></span>
 
-                <div class="vision-quote">
-                    "Transforming raw inventory data into a strategic asset for Jhaerin Tire Supply's competitive edge in the local market."
-                </div>
-
-                <div class="box">
-                    <div class="grid-2" style="align-items: center;">
-                        <div style="text-align: center;">
-                            <i class="fa-solid fa-microchip" style="font-size: 2.5em; color: var(--clr-red); opacity: 0.8;"></i>
-                            <p style="font-size: 0.45em; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; color: var(--clr-muted);">System Heart</p>
-                        </div>
-                        <div>
-                            <p style="font-size: 0.65em; line-height: 1.5;">
-                                A seamless bridge between <strong>warehouse operations</strong> and <strong>management decision-making</strong> via a modern digital interface.
-                            </p>
-                        </div>
+                <div class="grid-2" style="margin-top: 16px; gap: 14px;">
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-user-tie text-red" style="margin-right:9px;"></i>Store Owner
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">AJ Lirpa. Full system access: analytics, financial reports, low-stock thresholds, and staff management.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-users text-red" style="margin-right:9px;"></i>Store Staff
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">Restricted access. Primary users for logging daily transactions (stock-in / stock-out) and creating product records.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-laptop-code text-red" style="margin-right:9px;"></i>Dev Team
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">Team HULE. Responsible for designing, building, testing, and delivering the software system.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.82em; margin-bottom: 7px;">
+                            <i class="fa-solid fa-chalkboard-user text-red" style="margin-right:9px;"></i>Course Instructor
+                        </h4>
+                        <p style="font-size: 0.6em;" class="text-dim">Evaluates the deliverables, architecture, and documentation for CSP312 requirements.</p>
                     </div>
                 </div>
 
                 <aside class="notes">
-                    Our vision is to transform inventory data into a strategic asset, creating a warehouse-to-management bridge that ensures the business always stays competitive.
+                    Our platform serves multiple stakeholders. The store owner gets full access to reports and analytics, while store staff get restricted access to handle day-to-day stock records. Our development team and our course instructor represent the execution and evaluation sides of this project.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 06: FUNCTIONAL REQUIREMENTS (M)
+<!-- ============================================================
+                 SLIDE 4: WHY THIS MATTERS NOW
             ============================================================ -->
             <section>
-                <span class="eyebrow">Must-Have Features</span>
-                <div class="moscow-tag tag-m">M - CORE NECESSITIES</div>
-                <h2>Functional Requirements</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Business Impact</span>
+                <h2>Why This Matters Now</h2>
+                <span class="heading-rule"></span>
 
-                <div class="box" style="padding: 15px;">
-                    <ul class="styled-list" style="columns: 2 gap 20px;">
+                <div class="box" style="margin-top: 18px;">
+                    <ul class="styled-list" style="font-size: 1.08em;">
                         <li>
-                            <i class="fa-solid fa-right-to-bracket text-red"></i>
-                            <div style="font-size: 0.9em;"><strong>Secure Auth:</strong> Role-based login for Admin &amp; Staff. <span class="req-badge">REQ-01</span></div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span><strong>Slow Replenishment:</strong> <span class="text-dim">Manual tracking causes delayed alerts and poor restocking decisions.</span></span>
                         </li>
                         <li>
-                            <i class="fa-solid fa-plus-minus text-red"></i>
-                            <div style="font-size: 0.9em;"><strong>Stock Control:</strong> Direct Add/Edit/Delete of tire SKU. <span class="req-badge">REQ-02</span></div>
+                            <i class="fa-solid fa-money-bill-trend-down"></i>
+                            <span><strong>Lost Sales Data:</strong> <span class="text-dim">No real-time visibility means missed sales opportunities.</span></span>
                         </li>
                         <li>
-                            <i class="fa-solid fa-magnifying-glass text-red"></i>
-                            <div style="font-size: 0.9em;"><strong>Live Search:</strong> Filter by brand, size, or tread pattern. <span class="req-badge">REQ-03</span></div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-bell text-red"></i>
-                            <div style="font-size: 0.9em;"><strong>Low Stock Alerts:</strong> Threshold-based visual warnings. <span class="req-badge">REQ-04</span></div>
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span><strong>Financial Blind Spots:</strong> <span class="text-dim">No automated analytics prevents the owner from tracking true profit and inventory value.</span></span>
                         </li>
                     </ul>
                 </div>
 
                 <aside class="notes">
-                    These are our 'Must-Have' requirements under MoSCoW. Security, direct stock manipulation, live filtering, and stock alerts are non-negotiable for the core MVP.
+                    Why fix this now? Because the current workarounds cost the business actual money. Without real-time visibility or automated alerts, restocking is slow, sales are lost, and financial tracking is completely blind until the end of the month.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 07: FUNCTIONAL REQUIREMENTS (S&C)
+<!-- ============================================================
+                 SLIDE 5: PROPOSED SOLUTION
             ============================================================ -->
             <section>
-                <span class="eyebrow">Growth Features</span>
-                <div style="display: flex; gap: 10px; margin-bottom: 5px;">
-                    <div class="moscow-tag tag-s">S - SHOULD HAVE</div>
-                    <div class="moscow-tag tag-c">C - COULD HAVE</div>
-                </div>
-                <h2>Extended Functionality</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Our Answer</span>
+                <h2>Proposed Solution</h2>
+                <span class="heading-rule"></span>
 
-                <div class="grid-2">
-                    <div class="box box-gold">
-                        <p class="text-gold" style="font-weight: 800; font-size: 0.85em; margin-bottom: 12px;">Reporting &amp; History</p>
-                        <ul class="styled-list">
-                            <li><i class="fa-solid fa-file-pdf"></i> PDF/Excel export of inventory.</li>
-                            <li><i class="fa-solid fa-clock-rotate-left"></i> Audit logs of who edited what.</li>
-                        </ul>
+                <div class="vision-quote">
+                    A system that digitizes inventory tracking to improve accuracy, efficiency, and real-time monitoring for Jhaerin Tire Supply.
+                </div>
+
+                <div class="grid-3">
+                    <div class="box box-top">
+                        <i class="fa-solid fa-barcode text-red" style="font-size: 1.9em; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 10px var(--clr-red-glow));"></i>
+                        <h5 style="font-size: 0.85em; margin: 0;">Digitize Tracking</h5>
                     </div>
-                    <div class="box box-blue">
-                        <p class="text-blue" style="font-weight: 800; font-size: 0.85em; margin-bottom: 12px;">Smart Enhancements</p>
-                        <ul class="styled-list">
-                            <li><i class="fa-solid fa-barcode"></i> Barcode/QR scanning support.</li>
-                            <li><i class="fa-solid fa-mobile-screen-button"></i> Mobile-responsive view for floor staff.</li>
-                        </ul>
+                    <div class="box box-top">
+                        <i class="fa-solid fa-bell text-red" style="font-size: 1.9em; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 10px var(--clr-red-glow));"></i>
+                        <h5 style="font-size: 0.85em; margin: 0;">Automate Alerts</h5>
+                    </div>
+                    <div class="box box-top">
+                        <i class="fa-solid fa-chart-line text-red" style="font-size: 1.9em; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 10px var(--clr-red-glow));"></i>
+                        <h5 style="font-size: 0.85em; margin: 0;">Instant Reports</h5>
                     </div>
                 </div>
 
                 <aside class="notes">
-                    Moving to 'Should' and 'Could-Haves,' we plan for reporting, audit logs, and eventually barcode scanning to further optimize the workflow.
+                    Our proposed solution is a Web-based Inventory Management System. It replaces manual workflows into a structured dashboard that digitizes tracking, automates low stock alerts, and generates business-critical reports instantly.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 08: NON-FUNCTIONAL REQUIREMENTS
+<!-- ============================================================
+                 SLIDE 6: HIGH-LEVEL ARCHITECTURE
             ============================================================ -->
             <section>
-                <span class="eyebrow">System Standards</span>
-                <h2>Non-Functional Requirements</h2>
-                <div class="heading-rule"></div>
-
-                <div class="box">
-                    <div class="nfr-row">
-                        <div class="nfr-icon"><i class="fa-solid fa-gauge-high"></i></div>
-                        <div class="nfr-content">
-                            <strong>Performance</strong>
-                            <span>Search results should load in under 200ms.</span>
-                        </div>
-                        <div class="nfr-badge">NFR-01</div>
-                    </div>
-                    <div class="nfr-row">
-                        <div class="nfr-icon"><i class="fa-solid fa-lock"></i></div>
-                        <div class="nfr-content">
-                            <strong>Security</strong>
-                            <span>End-to-end encryption for session data and passwords.</span>
-                        </div>
-                        <div class="nfr-badge">NFR-02</div>
-                    </div>
-                    <div class="nfr-row">
-                        <div class="nfr-icon"><i class="fa-solid fa-up-right-from-square"></i></div>
-                        <div class="nfr-content">
-                            <strong>Scalability</strong>
-                            <span>Architecture supports up to 10,000 unique SKUs.</span>
-                        </div>
-                        <div class="nfr-badge">NFR-03</div>
-                    </div>
-                </div>
-
-                <aside class="notes">
-                    Beyond features, the system must be fast, secure, and scalable. We're targeting sub-200ms search times and a capacity for 10,000 unique SKUs.
-                </aside>
-            </section>
-
-            <!-- ============================================================
-                 SLIDE 09: ARCHITECTURE OVERVIEW
-            ============================================================ -->
-            <section>
-                <span class="eyebrow">Under The Hood</span>
+                <span class="eyebrow">Technical Design</span>
                 <h2>High-Level Architecture</h2>
-                <div class="heading-rule"></div>
+                <span class="heading-rule"></span>
 
                 <div class="arch-flow">
                     <div class="arch-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-display"></i></div>
-                        <span>Staff/Admin<br>Frontend</span>
+                        <div class="arch-node-icon"><i class="fa-solid fa-user-circle"></i></div>
+                        <span>User<br>(Owner / Staff)</span>
                     </div>
                     <div class="arch-connector">
                         <div class="arch-connector-line"></div>
                         <span class="arch-connector-label">HTTPS</span>
                     </div>
                     <div class="arch-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-gears"></i></div>
-                        <span>Business Logic<br>Layer</span>
+                        <div class="arch-node-icon"><i class="fa-brands fa-chrome"></i></div>
+                        <span>Web<br>Application</span>
+                    </div>
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <span class="arch-connector-label">API Calls</span>
+                    </div>
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-server"></i></div>
+                        <span>Server<br>Logic</span>
                     </div>
                     <div class="arch-connector">
                         <div class="arch-connector-line"></div>
                         <span class="arch-connector-label">SQL</span>
                     </div>
                     <div class="arch-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-server"></i></div>
-                        <span>Secure Data<br>Repository</span>
+                        <div class="arch-node-icon"><i class="fa-solid fa-database"></i></div>
+                        <span>Cloud<br>Database</span>
                     </div>
                 </div>
 
-                <div style="margin-top: 25px; font-size: 0.6em; color: var(--clr-muted); line-height: 1.6;">
-                    A clean <strong>3-tier architecture</strong> ensures separation of concerns, 
-                    allowing for easier maintenance and future feature expansions without breaking core logic.
-                </div>
+                <p style="font-size: 0.56em; margin-top: 22px; text-align: center;" class="text-dim">
+                    Users interact via browser → Next.js server processes secure requests → Supabase handles data storage
+                </p>
 
                 <aside class="notes">
-                    Our architecture follows a standard 3-tier model. This keeps the user interface separate from the business logic and the database, making it easier to update and maintain.
+                    From an architectural standpoint, we use a standard client-server model. Users log in through a web browser, communicating with our server logic, which securely reads and writes inventory data from a centralized cloud database.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 10: USER WORKFLOW
+<!-- ============================================================
+                 SLIDE 7: MoSCoW OVERVIEW
             ============================================================ -->
             <section>
-                <span class="eyebrow">Staff Experience</span>
-                <h2>Typical User Workflow</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Scope Management</span>
+                <h2>Scope &amp; Prioritization</h2>
+                <span class="heading-rule"></span>
+
+                <p class="text-dim" style="font-size: 0.72em; margin-bottom: 22px;">
+                    We use the <strong style="color:#dde3ed;">MoSCoW</strong> framework to manage scope and ensure core value is delivered first.
+                </p>
 
                 <div class="grid-2">
-                    <div class="box box-red">
-                        <h4 style="font-size: 0.7em; margin-bottom: 12px; color: var(--clr-red);">Restocking Process</h4>
-                        <ol style="font-size: 0.55em; color: var(--clr-text-dim); padding-left: 20px;">
-                            <li style="margin-bottom: 10px;">Login to Admin Dashboard</li>
-                            <li style="margin-bottom: 10px;">Scan or Search for Tire SKU</li>
-                            <li style="margin-bottom: 10px;">Input "Quantity Received"</li>
-                            <li style="margin-bottom: 10px;">Instant Batch Total Update</li>
-                        </ol>
+                    <div class="box">
+                        <span class="moscow-tag tag-m">Must Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Non-negotiable core functionality required for the system to operate.</p>
                     </div>
-                    <div class="box box-green">
-                        <h4 style="font-size: 0.7em; margin-bottom: 12px; color: var(--clr-green);">Sales Transaction</h4>
-                        <ol style="font-size: 0.55em; color: var(--clr-text-dim); padding-left: 20px;">
-                            <li style="margin-bottom: 10px;">Staff verifies stock on-site</li>
-                            <li style="margin-bottom: 10px;">Log Sale in System</li>
-                            <li style="margin-bottom: 10px;">Auto-Deduct from Inventory</li>
-                            <li style="margin-bottom: 10px;">Low stock alert (if triggered)</li>
-                        </ol>
+                    <div class="box box-gold">
+                        <span class="moscow-tag tag-s">Should Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Important, high-value features that enhance operational efficiency.</p>
+                    </div>
+                    <div class="box box-blue">
+                        <span class="moscow-tag tag-c">Could Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Nice-to-have features for future sprints if time permits.</p>
+                    </div>
+                    <div class="box box-gray">
+                        <span class="moscow-tag tag-w">Won't Have</span>
+                        <p style="font-size: 0.62em; margin: 0;" class="text-dim">Out of scope for this term's delivery.</p>
                     </div>
                 </div>
 
                 <aside class="notes">
-                    Here's how staff will use it. Restocking is a simple 4-step process, as is recording a sale. The goal is to make these interactions as fast as possible.
+                    To manage our development time actively, we utilized the MoSCoW prioritization framework. This guarantees that basic functional needs are met before adding complex enhancements.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 11: IMPLEMENTATION STRATEGY
+<!-- ============================================================
+                 SLIDE 8: MUST HAVE
             ============================================================ -->
             <section>
-                <span class="eyebrow">Execution Map</span>
-                <h2>Iterative Development</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Priority: Critical</span>
+                <h2>
+                    <span class="moscow-tag tag-m" style="font-size: 0.38em; vertical-align: middle; margin-right: 10px;">Must Have</span>
+                    Features
+                </h2>
+                <span class="heading-rule"></span>
+
+                <div class="box" style="margin-top: 16px;">
+                    <ul class="styled-list">
+                        <li><i class="fa-solid fa-lock"></i> User login &amp; authentication <span class="req-badge">FR-01</span></li>
+                        <li><i class="fa-solid fa-folder-plus"></i> Create product records (brand, size, tread) <span class="req-badge">FR-03, 04</span></li>
+                        <li><i class="fa-solid fa-boxes-packing"></i> Record stock-in and stock-out logs <span class="req-badge">FR-05, 06</span></li>
+                        <li><i class="fa-solid fa-desktop"></i> Real-time inventory quantity display <span class="req-badge">FR-07</span></li>
+                        <li><i class="fa-solid fa-chart-bar"></i> Analytics dashboard overview <span class="req-badge">FR-08</span></li>
+                        <li><i class="fa-regular fa-file-lines"></i> Generate daily inventory reports <span class="req-badge">FR-09</span></li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Our Must-Haves include the foundation: secure login, creating products like tires with specific treads and sizes, logging stock-in/out, viewing real time quantities, and generating simple daily reports.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 9: SHOULD HAVE
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Priority: Important</span>
+                <h2>
+                    <span class="moscow-tag tag-s" style="font-size: 0.38em; vertical-align: middle; margin-right: 10px;">Should Have</span>
+                    Features
+                </h2>
+                <span class="heading-rule"></span>
+
+                <div class="box box-gold" style="margin-top: 16px;">
+                    <ul class="styled-list">
+                        <li><i class="fa-solid fa-users-gear" style="color:var(--clr-gold)"></i> Staff account management <span class="req-badge">FR-02</span></li>
+                        <li><i class="fa-solid fa-calendar-week" style="color:var(--clr-gold)"></i> Weekly/Monthly sales reports <span class="req-badge">FR-10, 11</span></li>
+                        <li><i class="fa-solid fa-filter" style="color:var(--clr-gold)"></i> Advanced filtering (brand, size) <span class="req-badge">FR-12</span></li>
+                        <li><i class="fa-solid fa-arrow-up-right-dots" style="color:var(--clr-gold)"></i> Top-selling / Slow-moving analytics <span class="req-badge">FR-13, 14</span></li>
+                        <li><i class="fa-solid fa-coins" style="color:var(--clr-gold)"></i> Revenue &amp; gross profit computation <span class="req-badge">FR-15, 16</span></li>
+                        <li><i class="fa-solid fa-bell-exclamation" style="color:var(--clr-gold)"></i> Low-stock &amp; dead-stock alerts (60 days) <span class="req-badge">FR-21, 22</span></li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Our Should-Haves focus on business intelligence: staff management, deeper filtering, identifying top-selling versus dead stock tires, automating profit computation, and critical low-stock threshold alerts.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 10: COULD & WON'T HAVE
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Remaining Scope</span>
+                <h2>Could &amp; Won't Have</h2>
+                <span class="heading-rule"></span>
+
+                <div class="grid-2" style="margin-top: 18px;">
+                    <div class="box box-blue">
+                        <h4 style="color: var(--clr-blue); font-size: 0.82em; margin-bottom: 14px;">
+                            <i class="fa-solid fa-circle-plus" style="margin-right:8px;"></i>Could Have (Bonus)
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li><i class="fa-solid fa-chart-line" style="color:var(--clr-blue)"></i> Chart visualizations</li>
+                            <li><i class="fa-solid fa-file-pdf"  style="color:var(--clr-blue)"></i> Export to PDF / Excel</li>
+                            <li><i class="fa-solid fa-mobile-screen" style="color:var(--clr-blue)"></i> Mobile-responsive UI</li>
+                            <li><i class="fa-solid fa-calculator"    style="color:var(--clr-blue)"></i> Inventory value algorithms</li>
+                        </ul>
+                    </div>
+                    <div class="box box-gray">
+                        <h4 style="color: #64748b; font-size: 0.82em; margin-bottom: 14px;">
+                            <i class="fa-solid fa-ban" style="margin-right:8px;"></i>Won't Have (This Term)
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> E-commerce / Online orders</li>
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> Customer-facing portals</li>
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> Multi-branch support</li>
+                            <li><i class="fa-solid fa-xmark" style="color:#64748b"></i> Native mobile app</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    If time permits, we Could Have PDF exports and mobile responsiveness. However, we explicitly Won't Have e-commerce, customer portals, or multi-branch support this semester to ensure highest quality on the core inventory system.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 11: NON-FUNCTIONAL REQUIREMENTS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Quality Standards</span>
+                <h2>Non-Functional Requirements</h2>
+                <span class="heading-rule"></span>
+
+                <div class="box" style="margin-top: 16px; padding: 8px 22px;">
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="nfr-content">
+                            <strong>Performance</strong>
+                            <span>Dashboard loads within 5 seconds.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-01</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="nfr-content">
+                            <strong>Security</strong>
+                            <span>Strict authentication required before access.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-02</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-face-smile"></i></div>
+                        <div class="nfr-content">
+                            <strong>Usability</strong>
+                            <span>Staff can operate UI with minimal training.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-03</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-check-double"></i></div>
+                        <div class="nfr-content">
+                            <strong>Reliability</strong>
+                            <span>Accurate consistency during simultaneous operations.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-04</span>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-server"></i></div>
+                        <div class="nfr-content">
+                            <strong>Availability</strong>
+                            <span>Uptime at least 99% during business hours.</span>
+                        </div>
+                        <span class="nfr-badge">NFR-05</span>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Beyond features, the system must perform well. It will load dashboards under 5 seconds, mandate secure logins, be user-friendly for standard staff, remain reliably consistent during multiple records, and maintain 99% uptime during operational hours.
+                </aside>
+            </section>
+
+<!-- ============================================================
+                 SLIDE 12: DEVELOPMENT PROCESS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">How We Work</span>
+                <h2>Iterative Development Process</h2>
+                <span class="heading-rule"></span>
+
+                <p class="text-dim" style="font-size: 0.70em;">Building in iterative, incremental mini-sprints for continuous improvement.</p>
 
                 <div class="process-flow">
                     <div class="step">
-                        <div class="bubble"><i class="fa-solid fa-magnifying-glass-chart"></i><div class="step-num">1</div></div>
-                        <span>Analysis</span>
+                        <div class="bubble">
+                            <span class="step-num">1</span>
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <span>Requirements</span>
                     </div>
                     <div class="step-connector"></div>
                     <div class="step">
-                        <div class="bubble"><i class="fa-solid fa-pen-nib"></i><div class="step-num">2</div></div>
+                        <div class="bubble">
+                            <span class="step-num">2</span>
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
                         <span>Design</span>
                     </div>
                     <div class="step-connector"></div>
                     <div class="step">
-                        <div class="bubble"><i class="fa-solid fa-code"></i><div class="step-num">3</div></div>
+                        <div class="bubble">
+                            <span class="step-num">3</span>
+                            <i class="fa-solid fa-object-group"></i>
+                        </div>
+                        <span>Prototype</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble">
+                            <span class="step-num">4</span>
+                            <i class="fa-solid fa-code"></i>
+                        </div>
                         <span>Develop</span>
                     </div>
                     <div class="step-connector"></div>
                     <div class="step">
-                        <div class="bubble"><i class="fa-solid fa-vial-circle-check"></i><div class="step-num">4</div></div>
-                        <span>Validate</span>
+                        <div class="bubble">
+                            <span class="step-num">5</span>
+                            <i class="fa-solid fa-vial-circle-check"></i>
+                        </div>
+                        <span>Testing</span>
                     </div>
-                </div>
-
-                <div class="box" style="margin-top: 35px; border-left-color: var(--clr-gold);">
-                    <p style="font-size: 0.65em; display: flex; align-items: center; justify-content: center; gap: 15px;">
-                        <i class="fa-solid fa-rotate text-gold" style="font-size: 1.4em;"></i>
-                        <span>We utilize an <strong>Agile methodology</strong> with bi-weekly sprints to ensure stakeholder feedback is incorporated throughout the build.</span>
-                    </p>
                 </div>
 
                 <aside class="notes">
-                    We're using an Agile methodology. We analyze, design, develop, and validate in loops, ensuring Jhaerin Tire Supply gets exactly what they need through constant feedback.
+                    We use an iterative mini-sprint approach. Going from requirements capturing, to system design, prototyping, development, and stringent testing in a repeating cycle.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 12: SECURITY PROTOCOLS
+<!-- ============================================================
+                 SLIDE 13: TOOLS & TECHNOLOGIES
             ============================================================ -->
             <section>
-                <span class="eyebrow">Data Protection</span>
-                <h2>Security Architecture</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Our Stack</span>
+                <h2>Tools &amp; Technologies</h2>
+                <span class="heading-rule"></span>
 
-                <div class="grid-2">
-                    <div class="box box-red">
-                        <h4 style="font-size: 0.72em; margin-bottom: 12px;"><i class="fa-solid fa-fingerprint"></i> Authentication</h4>
-                        <p style="font-size: 0.55em; color: var(--clr-text-dim);">Multi-factor readiness and hashed credentials (BCrypt) to prevent unauthorized access to sensitive inventory records.</p>
+                <div class="grid-4" style="margin-top: 22px;">
+                    <div class="tech-card">
+                        <i class="fa-brands fa-react" style="color: #61dafb;"></i>
+                        <span class="tech-name">Next.js</span>
+                        <span class="tech-role">Frontend &amp; Backend</span>
                     </div>
-                    <div class="box box-blue">
-                        <h4 style="font-size: 0.72em; margin-bottom: 12px;"><i class="fa-solid fa-vault"></i> Data Integrity</h4>
-                        <p style="font-size: 0.55em; color: var(--clr-text-dim);">Transaction locking ensures two staff members can't accidentally overwrite the same stock count simultaneously.</p>
+                    <div class="tech-card">
+                        <i class="fa-solid fa-database" style="color: #3ecf8e;"></i>
+                        <span class="tech-name">Supabase</span>
+                        <span class="tech-role">Database &amp; Auth</span>
                     </div>
-                </div>
-
-                <div style="margin-top: 20px; text-align: center;">
-                    <i class="fa-solid fa-shield-halved" style="font-size: 1.8em; color: var(--clr-green); opacity: 0.3; margin-bottom: 10px;"></i>
-                    <p style="font-size: 0.5em; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 2px;">Built-in Compliance &amp; safety</p>
+                    <div class="tech-card">
+                        <i class="fa-solid fa-diagram-project" style="color: #fca311;"></i>
+                        <span class="tech-name">Draw.io</span>
+                        <span class="tech-role">System Design</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-brands fa-github" style="color: #ffffff;"></i>
+                        <span class="tech-name">GitHub</span>
+                        <span class="tech-role">Version Control</span>
+                    </div>
                 </div>
 
                 <aside class="notes">
-                    Security is baked in. We use industry-standard hashing for passwords and transaction locking to ensure inventory data remains perfectly accurate even with multiple users.
+                    Our technology stack leverages Next.js for both frontend and backend logic. We use Supabase for our robust database and authentication, Draw.io for system diagrams, and GitHub to manage version control securely.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 13: TECH STACK
+<!-- ============================================================
+                 SLIDE 14: TEAM ROLES
             ============================================================ -->
             <section>
-                <span class="eyebrow">Tools of the Trade</span>
-                <h2>Technology Stack</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">The People</span>
+                <h2>Team HULE — Roles</h2>
+                <span class="heading-rule"></span>
 
-                <div class="grid-4">
-                    <div class="tech-card">
-                        <i class="fa-brands fa-html5" style="color: #e34f26;"></i>
-                        <span class="tech-name">HTML/JS</span>
-                        <span class="tech-role">Modern UI</span>
+                <div class="grid-2" style="margin-top: 16px; gap: 14px;">
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-user-tie text-red" style="margin-right:9px;"></i>
+                        <strong>Project Manager</strong>
+                        <br><small class="text-dim">Coordinates tasks, scope, and deadlines.</small>
                     </div>
-                    <div class="tech-card">
-                        <i class="fa-brands fa-php" style="color: #777bb4;"></i>
-                        <span class="tech-name">PHP</span>
-                        <span class="tech-role">Backend Logic</span>
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-magnifying-glass text-red" style="margin-right:9px;"></i>
+                        <strong>Requirements Analyst</strong>
+                        <br><small class="text-dim">Elicits and documents client needs.</small>
                     </div>
-                    <div class="tech-card">
-                        <i class="fa-solid fa-database" style="color: #4479a1;"></i>
-                        <span class="tech-name">MySQL</span>
-                        <span class="tech-role">Structured Data</span>
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-palette text-red" style="margin-right:9px;"></i>
+                        <strong>UI/UX Designer</strong>
+                        <br><small class="text-dim">Designs interface layouts and flows.</small>
                     </div>
-                    <div class="tech-card">
-                        <i class="fa-brands fa-cloudflare" style="color: #f38020;"></i>
-                        <span class="tech-name">Cloudflare</span>
-                        <span class="tech-role">Hosting &amp; Edge</span>
+                    <div class="box" style="font-size: 0.88em;">
+                        <i class="fa-solid fa-laptop-code text-red" style="margin-right:9px;"></i>
+                        <strong>Developer(s)</strong>
+                        <br><small class="text-dim">Implements code — Frontend &amp; Backend.</small>
                     </div>
                 </div>
 
-                <p style="margin-top: 25px; font-size: 0.6em; color: var(--clr-muted); font-style: italic;">
-                    Selected for high compatibility, low maintenance costs, and proven reliability in Philippine enterprise environments.
-                </p>
+                <div class="box box-top" style="margin-top: 14px; font-size: 0.88em;">
+                    <i class="fa-solid fa-clipboard-check text-red" style="margin-right:9px;"></i>
+                    <strong>Tester / Documentation</strong>
+                    <br><small class="text-dim">Validates software and compiles project manuals.</small>
+                </div>
 
                 <aside class="notes">
-                    We've chosen HTML, PHP, MySQL, and Cloudflare. This stack is reliable, affordable to maintain, and highly compatible with most business hardware.
+                    Our success relies on structured roles. We have designated members handling project management, analyzing requirements, creating UI/UX designs, writing the actual code blocks, and finally testing and documenting the final deliverable.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 14: COST-BENEFIT RATIO
+<!-- ============================================================
+                 SLIDE 15: RISKS & NEXT STEPS
             ============================================================ -->
             <section>
-                <span class="eyebrow">Value Proposition</span>
-                <h2>ROI &amp; Business Impact</h2>
-                <div class="heading-rule"></div>
+                <span class="eyebrow">Looking Ahead</span>
+                <h2>Risks &amp; Next Steps</h2>
+                <span class="heading-rule"></span>
 
-                <div class="grid-2">
+                <div class="grid-2" style="margin-top: 18px;">
                     <div class="box">
-                        <h4 style="font-size: 0.7em; margin-bottom: 8px; color: var(--clr-green);">Reduction in Loss</h4>
-                        <p style="font-size: 0.55em; color: var(--clr-muted);">Eliminate missed sales due to "ghost stock" and minimize physical shrinkage through better tracking.</p>
+                        <h4 style="font-size: 0.85em; color: var(--clr-red); margin-bottom: 14px;">
+                            <i class="fa-solid fa-triangle-exclamation" style="margin-right:8px;"></i>Risks &amp; Mitigation
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li>
+                                <i class="fa-solid fa-clock text-red"></i>
+                                <span>
+                                    <strong>Risk:</strong> Limited dev time &amp; complex data modeling.
+                                    <br><span class="text-dim"><strong>Mitigation:</strong> Strict adherence to MoSCoW.</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-graduation-cap text-red"></i>
+                                <span>
+                                    <strong>Risk:</strong> Learning curve on new tech.
+                                    <br><span class="text-dim"><strong>Mitigation:</strong> Early framework familiarization.</span>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="box">
-                        <h4 style="font-size: 0.7em; margin-bottom: 8px; color: var(--clr-blue);">Optimized Cash Flow</h4>
-                        <p style="font-size: 0.55em; color: var(--clr-muted);">Data-driven reordering ensures capital isn't tied up in slow-moving tires that sit on shelves for months.</p>
+                    <div class="box box-green">
+                        <h4 style="font-size: 0.85em; color: var(--clr-green); margin-bottom: 14px;">
+                            <i class="fa-solid fa-forward-step" style="margin-right:8px;"></i>Next Deliverables
+                        </h4>
+                        <ul class="styled-list" style="font-size: 0.9em;">
+                            <li style="margin-bottom: 12px;">
+                                <i class="fa-regular fa-square-check" style="color:var(--clr-green)"></i> Requirements Documentation
+                            </li>
+                            <li style="margin-bottom: 12px;">
+                                <i class="fa-solid fa-sitemap" style="color:var(--clr-green)"></i> System Design Diagrams
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-desktop" style="color:var(--clr-green)"></i> Prototype UI
+                            </li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="box box-top box-gold" style="margin-top: 15px;">
-                    <p style="font-size: 1.1em; color: var(--clr-text); font-weight: 800;">"Better Data. Faster Sales. Smoother Growth."</p>
                 </div>
 
                 <aside class="notes">
-                    The ROI is clear: less loss from ghost stock and better cash flow through optimized reordering. Better data truly leads to faster sales and smoother growth.
+                    We recognize the risks of limited development time and learning new frameworks. We will mitigate this through strict scope control. Moving forward, our next deliverables are formal documentation, diagrams, and our first UI prototype.
                 </aside>
             </section>
 
-            <!-- ============================================================
-                 SLIDE 15: THE TEAM
-            ============================================================ -->
-            <section>
-                <span class="eyebrow">The Minds Behind</span>
-                <h2>Team HULE</h2>
-                <div class="heading-rule"></div>
-
-                <div class="grid-4" style="margin-top: 10px;">
-                    <div class="box box-red" style="padding: 15px 10px;">
-                        <i class="fa-solid fa-user-tie" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-red);"></i>
-                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">P. Jhaerin</h4>
-                        <p style="font-size: 0.42em; color: var(--clr-muted);">Project Lead</p>
-                    </div>
-                    <div class="box box-gold" style="padding: 15px 10px;">
-                        <i class="fa-solid fa-code" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-gold);"></i>
-                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">A. Jhaerin</h4>
-                        <p style="font-size: 0.42em; color: var(--clr-muted);">Lead Dev</p>
-                    </div>
-                    <div class="box box-blue" style="padding: 15px 10px;">
-                        <i class="fa-solid fa-vial" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-blue);"></i>
-                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">R. Jhaerin</h4>
-                        <p style="font-size: 0.42em; color: var(--clr-muted);">QA / Testing</p>
-                    </div>
-                    <div class="box box-green" style="padding: 15px 10px;">
-                        <i class="fa-solid fa-database" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-green);"></i>
-                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">E. Jhaerin</h4>
-                        <p style="font-size: 0.42em; color: var(--clr-muted);">DB Admin</p>
-                    </div>
-                </div>
-
-                <div class="box" style="margin-top: 25px; border-left: none; border-top: 1px solid var(--border); background: transparent;">
-                    <p style="font-size: 0.58em; color: var(--clr-text-dim);">
-                        Combining diverse technical skills with a shared commitment to deliver Philippine-centric business solutions.
-                    </p>
-                </div>
-
-                <aside class="notes">
-                    And here is Team HULE. We have a balanced group of leads in project management, development, QA, and database administration, all dedicated to this project.
-                </aside>
-            </section>
-
-            <!-- ============================================================
+<!-- ============================================================
                  SLIDE 16: CLOSING
             ============================================================ -->
             <section>
@@ -1234,7 +1534,7 @@
             hash: true,
             transition: 'slide',
             backgroundTransition: 'fade',
-            plugins: [ RevealNotes ],
+            plugins: [RevealNotes],
             margin: 0.08,
             minScale: 0.2,
             maxScale: 2.0,
@@ -1243,6 +1543,8 @@
         });
     </script>
 
+    
 
 </body>
+
 </html>
