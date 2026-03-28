@@ -718,20 +718,29 @@
 
     <script>
         document.addEventListener('keydown', function(event) {
-            const match = window.location.pathname.match(/slide_(\d+)\.html/);
-            if (!match) return;
-            const currentSlide = parseInt(match[1], 10);
-            let nextSlide = null;
-            
+            const filename = window.location.pathname.split('/').pop() || 'index.html';
+            let currentSlide = 1;
+            const match = filename.match(/slide_(\d+)\.html/);
+            if (match) {
+                currentSlide = parseInt(match[1], 10);
+            } else if (filename !== 'index.html' && filename !== '') {
+                return;
+            }
+
+            let nextSlideNum = null;
             if (event.key === 'ArrowRight' || event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') {
-                nextSlide = currentSlide + 1;
+                nextSlideNum = currentSlide + 1;
             } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp' || event.key === 'PageUp') {
-                nextSlide = currentSlide - 1;
+                nextSlideNum = currentSlide - 1;
             }
             
-            if (nextSlide !== null && nextSlide >= 1 && nextSlide <= 16) {
-                const num = nextSlide.toString().padStart(2, '0');
-                window.location.href = 'slide_' + num + '.html';
+            if (nextSlideNum !== null && nextSlideNum >= 1 && nextSlideNum <= 16) {
+                if (nextSlideNum === 1) {
+                    window.location.href = 'index.html';
+                } else {
+                    const num = nextSlideNum.toString().padStart(2, '0');
+                    window.location.href = 'slide_' + num + '.html';
+                }
             }
         });
     </script>
