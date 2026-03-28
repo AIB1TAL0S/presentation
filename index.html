@@ -662,38 +662,564 @@
 <body>
     <div class="reveal">
         <div class="slides">
-
-
             <!-- ============================================================
-                 SLIDE 1: TITLE
+                 SLIDE 01: TITLE
             ============================================================ -->
-            <section>
+            <section data-state="title-slide">
                 <div class="icon-ring-wrapper">
-                    <span class="ring ring-1"></span>
-                    <span class="ring ring-2"></span>
-                    <span class="ring ring-3"></span>
-                    <i class="fa-solid fa-circle-dot"></i>
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <i class="fa-solid fa-tire"></i>
                 </div>
-
-                <span class="eyebrow">CSP312 — Software Engineering 1</span>
-                <h1 style="font-size: 2.3em; margin-bottom: 0.05em;">
+                
+                <span class="eyebrow" style="color: var(--clr-text-dim);">Business Pitch Presentation</span>
+                <h1 style="font-size: 2.8em; margin-bottom: 0.1em; line-height: 1.1;">
                     <span class="gradient-text">Jhaerin Tire Supply</span>
                 </h1>
-                <h3 style="font-weight: 500; font-size: 1.0em; color: #7d8fa3; margin-top: 0;">
+                <h2 style="font-weight: 500; color: var(--clr-muted); font-size: 1.2em; margin-top: 0;">
                     Inventory Management System
-                </h3>
+                </h2>
 
                 <div class="title-divider"></div>
 
                 <div class="title-meta">
-                    <div class="meta-item"><i class="fa-solid fa-users"></i><strong>Team HULE</strong></div>
-                    <div class="meta-item"><i class="fa-solid fa-graduation-cap"></i><strong>BSCS 2C</strong></div>
-                    <div class="meta-item"><i class="fa-solid fa-calendar-days"></i><strong>S.Y. 2026–2027</strong></div>
-                    <div class="meta-item"><i class="fa-solid fa-store"></i>Client: <strong>April Joy Z. Altiche</strong></div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Presented by: <strong>Team HULE</strong></span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <span>Date: <strong>SY 2026–2027</strong></span>
+                    </div>
                 </div>
 
                 <aside class="notes">
-                    Good morning everyone. We are Team HULE from BSCS 2C. Today we are pitching our project for Software Engineering 1: A web-based Inventory Management System built specifically for our client, Jhaerin Tire Supply.
+                    Good day everyone! Welcome to Team HULE's presentation for the Jhaerin Tire Supply Inventory Management System. 
+                    We're excited to show you how we're modernizing inventory control for the automotive industry.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 02: PROBLEM STATEMENT
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">The Challenge</span>
+                <h2>The Current Bottleneck</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-2">
+                    <div class="box">
+                        <p class="text-red" style="font-weight: 800; font-size: 0.9em; margin-bottom: 10px;">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Manual Tracking
+                        </p>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-circle-xmark"></i> Reliance on scattered paper logs and basic spreadsheets.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> High risk of human error during peak business hours.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Difficulty in generating instant, accurate reports.</li>
+                        </ul>
+                    </div>
+                    <div class="box box-gold">
+                        <p class="text-gold" style="font-weight: 800; font-size: 0.9em; margin-bottom: 10px;">
+                            <i class="fa-solid fa-hourglass-half"></i> Operational Delays
+                        </p>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-circle-xmark"></i> Time-consuming manual stock audits.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Frequent stockouts or overstocking on critical tire models.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Slower customer service due to data uncertainty.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Currently, Jhaerin Tire Supply faces significant bottlenecks. They rely on manual logs, leading to errors and delays in stock auditing. This results in either missing out on sales due to stockouts or tying up capital in overstock.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 03: SOLUTION OVERVIEW
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">The Innovation</span>
+                <h2>Our Solution</h2>
+                <div class="heading-rule"></div>
+
+                <div class="box box-top" style="margin-bottom: 25px;">
+                    <h3 style="font-size: 1.1em; color: var(--clr-red); margin-bottom: 8px;">Automated Inventory Intelligence</h3>
+                    <p style="font-size: 0.72em; color: var(--clr-text-dim);">A custom-built, centralized digital platform designed specifically for the unique workflow of tire supply management.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="box box-gray">
+                        <i class="fa-solid fa-database" style="font-size: 1.4em; color: var(--clr-blue); margin-bottom: 10px;"></i>
+                        <h4 style="font-size: 0.6em; margin-bottom: 8px;">Centralized Database</h4>
+                        <p style="font-size: 0.52em; color: var(--clr-muted);">Unified record of every SKU, brand, and size across multiple branches.</p>
+                    </div>
+                    <div class="box box-gray">
+                        <i class="fa-solid fa-bolt" style="font-size: 1.4em; color: var(--clr-gold); margin-bottom: 10px;"></i>
+                        <h4 style="font-size: 0.6em; margin-bottom: 8px;">Real-Time Updates</h4>
+                        <p style="font-size: 0.52em; color: var(--clr-muted);">Instant reflection of sales and restock actions to maintain stock integrity.</p>
+                    </div>
+                    <div class="box box-gray">
+                        <i class="fa-solid fa-chart-line" style="font-size: 1.4em; color: var(--clr-green); margin-bottom: 10px;"></i>
+                        <h4 style="font-size: 0.6em; margin-bottom: 8px;">Smart Analytics</h4>
+                        <p style="font-size: 0.52em; color: var(--clr-muted);">Actionable insights into best-selling models and inventory health.</p>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Our proposed solution is an Automated Inventory Intelligence platform. It centralizes all data, provides real-time updates, and offers smart analytics to help the business grow.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 04: CORE OBJECTIVES
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Mission Parameters</span>
+                <h2>Project Objectives</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-2">
+                    <div class="box box-green">
+                        <h3 style="font-size: 0.9em; margin-bottom: 12px;"><i class="fa-solid fa-bullseye"></i> Primary Goal</h3>
+                        <p style="font-size: 0.72em; line-height: 1.4; color: var(--clr-text);">
+                            To develop a robust and intuitive system that eliminates manual data entry bottlenecks and provides a 100% accurate, real-time view of inventory levels.
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-check-double"></i> <strong>Efficiency:</strong> Reduce stock-checking time by 75%.</li>
+                            <li><i class="fa-solid fa-shield-halved"></i> <strong>Accuracy:</strong> Minimize discrepancies to less than 1%.</li>
+                            <li><i class="fa-solid fa-users-gear"></i> <strong>Usability:</strong> Ensure user-friendly interface for all staff.</li>
+                            <li><i class="fa-solid fa-file-export"></i> <strong>Reporting:</strong> One-click generation of audit reports.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    The core objective is a system that is robust yet intuitive. We want to reduce stock-checking time by 75% and keep data discrepancies below 1%.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 05: SYSTEM VISION
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">The Vision</span>
+                <h2>Integrated Intelligence</h2>
+                <div class="heading-rule"></div>
+
+                <div class="vision-quote">
+                    "Transforming raw inventory data into a strategic asset for Jhaerin Tire Supply's competitive edge in the local market."
+                </div>
+
+                <div class="box">
+                    <div class="grid-2" style="align-items: center;">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-microchip" style="font-size: 2.5em; color: var(--clr-red); opacity: 0.8;"></i>
+                            <p style="font-size: 0.45em; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; color: var(--clr-muted);">System Heart</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.65em; line-height: 1.5;">
+                                A seamless bridge between <strong>warehouse operations</strong> and <strong>management decision-making</strong> via a modern digital interface.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Our vision is to transform inventory data into a strategic asset, creating a warehouse-to-management bridge that ensures the business always stays competitive.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 06: FUNCTIONAL REQUIREMENTS (M)
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Must-Have Features</span>
+                <div class="moscow-tag tag-m">M - CORE NECESSITIES</div>
+                <h2>Functional Requirements</h2>
+                <div class="heading-rule"></div>
+
+                <div class="box" style="padding: 15px;">
+                    <ul class="styled-list" style="columns: 2 gap 20px;">
+                        <li>
+                            <i class="fa-solid fa-right-to-bracket text-red"></i>
+                            <div style="font-size: 0.9em;"><strong>Secure Auth:</strong> Role-based login for Admin &amp; Staff. <span class="req-badge">REQ-01</span></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-plus-minus text-red"></i>
+                            <div style="font-size: 0.9em;"><strong>Stock Control:</strong> Direct Add/Edit/Delete of tire SKU. <span class="req-badge">REQ-02</span></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass text-red"></i>
+                            <div style="font-size: 0.9em;"><strong>Live Search:</strong> Filter by brand, size, or tread pattern. <span class="req-badge">REQ-03</span></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bell text-red"></i>
+                            <div style="font-size: 0.9em;"><strong>Low Stock Alerts:</strong> Threshold-based visual warnings. <span class="req-badge">REQ-04</span></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    These are our 'Must-Have' requirements under MoSCoW. Security, direct stock manipulation, live filtering, and stock alerts are non-negotiable for the core MVP.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 07: FUNCTIONAL REQUIREMENTS (S&C)
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Growth Features</span>
+                <div style="display: flex; gap: 10px; margin-bottom: 5px;">
+                    <div class="moscow-tag tag-s">S - SHOULD HAVE</div>
+                    <div class="moscow-tag tag-c">C - COULD HAVE</div>
+                </div>
+                <h2>Extended Functionality</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-2">
+                    <div class="box box-gold">
+                        <p class="text-gold" style="font-weight: 800; font-size: 0.85em; margin-bottom: 12px;">Reporting &amp; History</p>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-file-pdf"></i> PDF/Excel export of inventory.</li>
+                            <li><i class="fa-solid fa-clock-rotate-left"></i> Audit logs of who edited what.</li>
+                        </ul>
+                    </div>
+                    <div class="box box-blue">
+                        <p class="text-blue" style="font-weight: 800; font-size: 0.85em; margin-bottom: 12px;">Smart Enhancements</p>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-barcode"></i> Barcode/QR scanning support.</li>
+                            <li><i class="fa-solid fa-mobile-screen-button"></i> Mobile-responsive view for floor staff.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Moving to 'Should' and 'Could-Haves,' we plan for reporting, audit logs, and eventually barcode scanning to further optimize the workflow.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 08: NON-FUNCTIONAL REQUIREMENTS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">System Standards</span>
+                <h2>Non-Functional Requirements</h2>
+                <div class="heading-rule"></div>
+
+                <div class="box">
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <div class="nfr-content">
+                            <strong>Performance</strong>
+                            <span>Search results should load in under 200ms.</span>
+                        </div>
+                        <div class="nfr-badge">NFR-01</div>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-lock"></i></div>
+                        <div class="nfr-content">
+                            <strong>Security</strong>
+                            <span>End-to-end encryption for session data and passwords.</span>
+                        </div>
+                        <div class="nfr-badge">NFR-02</div>
+                    </div>
+                    <div class="nfr-row">
+                        <div class="nfr-icon"><i class="fa-solid fa-up-right-from-square"></i></div>
+                        <div class="nfr-content">
+                            <strong>Scalability</strong>
+                            <span>Architecture supports up to 10,000 unique SKUs.</span>
+                        </div>
+                        <div class="nfr-badge">NFR-03</div>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Beyond features, the system must be fast, secure, and scalable. We're targeting sub-200ms search times and a capacity for 10,000 unique SKUs.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 09: ARCHITECTURE OVERVIEW
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Under The Hood</span>
+                <h2>High-Level Architecture</h2>
+                <div class="heading-rule"></div>
+
+                <div class="arch-flow">
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-display"></i></div>
+                        <span>Staff/Admin<br>Frontend</span>
+                    </div>
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <span class="arch-connector-label">HTTPS</span>
+                    </div>
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-gears"></i></div>
+                        <span>Business Logic<br>Layer</span>
+                    </div>
+                    <div class="arch-connector">
+                        <div class="arch-connector-line"></div>
+                        <span class="arch-connector-label">SQL</span>
+                    </div>
+                    <div class="arch-node">
+                        <div class="arch-node-icon"><i class="fa-solid fa-server"></i></div>
+                        <span>Secure Data<br>Repository</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 25px; font-size: 0.6em; color: var(--clr-muted); line-height: 1.6;">
+                    A clean <strong>3-tier architecture</strong> ensures separation of concerns, 
+                    allowing for easier maintenance and future feature expansions without breaking core logic.
+                </div>
+
+                <aside class="notes">
+                    Our architecture follows a standard 3-tier model. This keeps the user interface separate from the business logic and the database, making it easier to update and maintain.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 10: USER WORKFLOW
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Staff Experience</span>
+                <h2>Typical User Workflow</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-2">
+                    <div class="box box-red">
+                        <h4 style="font-size: 0.7em; margin-bottom: 12px; color: var(--clr-red);">Restocking Process</h4>
+                        <ol style="font-size: 0.55em; color: var(--clr-text-dim); padding-left: 20px;">
+                            <li style="margin-bottom: 10px;">Login to Admin Dashboard</li>
+                            <li style="margin-bottom: 10px;">Scan or Search for Tire SKU</li>
+                            <li style="margin-bottom: 10px;">Input "Quantity Received"</li>
+                            <li style="margin-bottom: 10px;">Instant Batch Total Update</li>
+                        </ol>
+                    </div>
+                    <div class="box box-green">
+                        <h4 style="font-size: 0.7em; margin-bottom: 12px; color: var(--clr-green);">Sales Transaction</h4>
+                        <ol style="font-size: 0.55em; color: var(--clr-text-dim); padding-left: 20px;">
+                            <li style="margin-bottom: 10px;">Staff verifies stock on-site</li>
+                            <li style="margin-bottom: 10px;">Log Sale in System</li>
+                            <li style="margin-bottom: 10px;">Auto-Deduct from Inventory</li>
+                            <li style="margin-bottom: 10px;">Low stock alert (if triggered)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <aside class="notes">
+                    Here's how staff will use it. Restocking is a simple 4-step process, as is recording a sale. The goal is to make these interactions as fast as possible.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 11: IMPLEMENTATION STRATEGY
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Execution Map</span>
+                <h2>Iterative Development</h2>
+                <div class="heading-rule"></div>
+
+                <div class="process-flow">
+                    <div class="step">
+                        <div class="bubble"><i class="fa-solid fa-magnifying-glass-chart"></i><div class="step-num">1</div></div>
+                        <span>Analysis</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble"><i class="fa-solid fa-pen-nib"></i><div class="step-num">2</div></div>
+                        <span>Design</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble"><i class="fa-solid fa-code"></i><div class="step-num">3</div></div>
+                        <span>Develop</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="bubble"><i class="fa-solid fa-vial-circle-check"></i><div class="step-num">4</div></div>
+                        <span>Validate</span>
+                    </div>
+                </div>
+
+                <div class="box" style="margin-top: 35px; border-left-color: var(--clr-gold);">
+                    <p style="font-size: 0.65em; display: flex; align-items: center; justify-content: center; gap: 15px;">
+                        <i class="fa-solid fa-rotate text-gold" style="font-size: 1.4em;"></i>
+                        <span>We utilize an <strong>Agile methodology</strong> with bi-weekly sprints to ensure stakeholder feedback is incorporated throughout the build.</span>
+                    </p>
+                </div>
+
+                <aside class="notes">
+                    We're using an Agile methodology. We analyze, design, develop, and validate in loops, ensuring Jhaerin Tire Supply gets exactly what they need through constant feedback.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 12: SECURITY PROTOCOLS
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Data Protection</span>
+                <h2>Security Architecture</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-2">
+                    <div class="box box-red">
+                        <h4 style="font-size: 0.72em; margin-bottom: 12px;"><i class="fa-solid fa-fingerprint"></i> Authentication</h4>
+                        <p style="font-size: 0.55em; color: var(--clr-text-dim);">Multi-factor readiness and hashed credentials (BCrypt) to prevent unauthorized access to sensitive inventory records.</p>
+                    </div>
+                    <div class="box box-blue">
+                        <h4 style="font-size: 0.72em; margin-bottom: 12px;"><i class="fa-solid fa-vault"></i> Data Integrity</h4>
+                        <p style="font-size: 0.55em; color: var(--clr-text-dim);">Transaction locking ensures two staff members can't accidentally overwrite the same stock count simultaneously.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; text-align: center;">
+                    <i class="fa-solid fa-shield-halved" style="font-size: 1.8em; color: var(--clr-green); opacity: 0.3; margin-bottom: 10px;"></i>
+                    <p style="font-size: 0.5em; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 2px;">Built-in Compliance &amp; safety</p>
+                </div>
+
+                <aside class="notes">
+                    Security is baked in. We use industry-standard hashing for passwords and transaction locking to ensure inventory data remains perfectly accurate even with multiple users.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 13: TECH STACK
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Tools of the Trade</span>
+                <h2>Technology Stack</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-4">
+                    <div class="tech-card">
+                        <i class="fa-brands fa-html5" style="color: #e34f26;"></i>
+                        <span class="tech-name">HTML/JS</span>
+                        <span class="tech-role">Modern UI</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-brands fa-php" style="color: #777bb4;"></i>
+                        <span class="tech-name">PHP</span>
+                        <span class="tech-role">Backend Logic</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-solid fa-database" style="color: #4479a1;"></i>
+                        <span class="tech-name">MySQL</span>
+                        <span class="tech-role">Structured Data</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fa-brands fa-cloudflare" style="color: #f38020;"></i>
+                        <span class="tech-name">Cloudflare</span>
+                        <span class="tech-role">Hosting &amp; Edge</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 25px; font-size: 0.6em; color: var(--clr-muted); font-style: italic;">
+                    Selected for high compatibility, low maintenance costs, and proven reliability in Philippine enterprise environments.
+                </p>
+
+                <aside class="notes">
+                    We've chosen HTML, PHP, MySQL, and Cloudflare. This stack is reliable, affordable to maintain, and highly compatible with most business hardware.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 14: COST-BENEFIT RATIO
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">Value Proposition</span>
+                <h2>ROI &amp; Business Impact</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-2">
+                    <div class="box">
+                        <h4 style="font-size: 0.7em; margin-bottom: 8px; color: var(--clr-green);">Reduction in Loss</h4>
+                        <p style="font-size: 0.55em; color: var(--clr-muted);">Eliminate missed sales due to "ghost stock" and minimize physical shrinkage through better tracking.</p>
+                    </div>
+                    <div class="box">
+                        <h4 style="font-size: 0.7em; margin-bottom: 8px; color: var(--clr-blue);">Optimized Cash Flow</h4>
+                        <p style="font-size: 0.55em; color: var(--clr-muted);">Data-driven reordering ensures capital isn't tied up in slow-moving tires that sit on shelves for months.</p>
+                    </div>
+                </div>
+
+                <div class="box box-top box-gold" style="margin-top: 15px;">
+                    <p style="font-size: 1.1em; color: var(--clr-text); font-weight: 800;">"Better Data. Faster Sales. Smoother Growth."</p>
+                </div>
+
+                <aside class="notes">
+                    The ROI is clear: less loss from ghost stock and better cash flow through optimized reordering. Better data truly leads to faster sales and smoother growth.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 15: THE TEAM
+            ============================================================ -->
+            <section>
+                <span class="eyebrow">The Minds Behind</span>
+                <h2>Team HULE</h2>
+                <div class="heading-rule"></div>
+
+                <div class="grid-4" style="margin-top: 10px;">
+                    <div class="box box-red" style="padding: 15px 10px;">
+                        <i class="fa-solid fa-user-tie" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-red);"></i>
+                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">P. Jhaerin</h4>
+                        <p style="font-size: 0.42em; color: var(--clr-muted);">Project Lead</p>
+                    </div>
+                    <div class="box box-gold" style="padding: 15px 10px;">
+                        <i class="fa-solid fa-code" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-gold);"></i>
+                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">A. Jhaerin</h4>
+                        <p style="font-size: 0.42em; color: var(--clr-muted);">Lead Dev</p>
+                    </div>
+                    <div class="box box-blue" style="padding: 15px 10px;">
+                        <i class="fa-solid fa-vial" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-blue);"></i>
+                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">R. Jhaerin</h4>
+                        <p style="font-size: 0.42em; color: var(--clr-muted);">QA / Testing</p>
+                    </div>
+                    <div class="box box-green" style="padding: 15px 10px;">
+                        <i class="fa-solid fa-database" style="font-size: 1.5em; margin-bottom: 8px; color: var(--clr-green);"></i>
+                        <h4 style="font-size: 0.52em; margin-bottom: 3px;">E. Jhaerin</h4>
+                        <p style="font-size: 0.42em; color: var(--clr-muted);">DB Admin</p>
+                    </div>
+                </div>
+
+                <div class="box" style="margin-top: 25px; border-left: none; border-top: 1px solid var(--border); background: transparent;">
+                    <p style="font-size: 0.58em; color: var(--clr-text-dim);">
+                        Combining diverse technical skills with a shared commitment to deliver Philippine-centric business solutions.
+                    </p>
+                </div>
+
+                <aside class="notes">
+                    And here is Team HULE. We have a balanced group of leads in project management, development, QA, and database administration, all dedicated to this project.
+                </aside>
+            </section>
+
+            <!-- ============================================================
+                 SLIDE 16: CLOSING
+            ============================================================ -->
+            <section>
+                <div class="closing-ring">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <h1 style="font-size: 3em; margin: 0 0 0.1em;">
+                    <span class="gradient-text">Thank You!</span>
+                </h1>
+                <h3 style="font-weight: 400; color: var(--clr-muted); margin: 10px 0 0;">
+                    Questions &amp; Open Discussion
+                </h3>
+                <div class="title-divider"></div>
+                <p style="font-size: 0.6em; color: var(--clr-muted);">
+                    <strong style="color: #b0c4d8;">Team HULE</strong> &nbsp;·&nbsp;
+                    Jhaerin Tire Supply Inventory Management &nbsp;·&nbsp;
+                    CSP312 &nbsp;·&nbsp; S.Y. 2026–2027
+                </p>
+
+                <aside class="notes">
+                    Thank you so much for your time and attention today. We are Team Hule, and we now open the floor to any questions you may have about our pitch!
                 </aside>
             </section>
         </div>
@@ -717,34 +1243,6 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('keydown', function(event) {
-            const filename = window.location.pathname.split('/').pop() || 'index.html';
-            let currentSlide = 1;
-            const match = filename.match(/slide_(\d+)\.html/);
-            if (match) {
-                currentSlide = parseInt(match[1], 10);
-            } else if (filename !== 'index.html' && filename !== '') {
-                return;
-            }
-
-            let nextSlideNum = null;
-            if (event.key === 'ArrowRight' || event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') {
-                nextSlideNum = currentSlide + 1;
-            } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp' || event.key === 'PageUp') {
-                nextSlideNum = currentSlide - 1;
-            }
-            
-            if (nextSlideNum !== null && nextSlideNum >= 1 && nextSlideNum <= 16) {
-                if (nextSlideNum === 1) {
-                    window.location.href = 'index.html';
-                } else {
-                    const num = nextSlideNum.toString().padStart(2, '0');
-                    window.location.href = 'slide_' + num + '.html';
-                }
-            }
-        });
-    </script>
 
 </body>
 </html>
